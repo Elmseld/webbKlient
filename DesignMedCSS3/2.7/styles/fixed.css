@@ -1,0 +1,52 @@
+h1, h2 {
+	text-align: center;
+}
+
+header{
+	border: 1px solid;
+	position: absolute;
+	margin: 20px auto;
+	width: 1200px;
+	height: 100px;
+	left: 70px;
+}
+
+aside.left {
+	border: 1px solid;
+	position: absolute;
+	margin: 20px auto;
+	width: 250px;
+	height: 600px;
+	top: 150px;
+}
+
+article {
+	border: 1px solid;
+	position: absolute;
+	margin: 20px auto;
+	width: 700px;
+	height: 600px;
+	left: 320px;
+	top: 150px;
+	
+}
+
+aside.right {
+	border: 1px solid;
+	position: absolute;
+	margin: 20px auto;
+	width: 250px;
+	height: 600px;
+	top: 150px;
+	left: 1090px;
+}
+
+footer {
+	border: 1px solid;
+	position: absolute;
+	margin: 20px auto;
+	width: 1200px;
+	height: 100px;
+	top: 770px;
+	left: 70px;
+}

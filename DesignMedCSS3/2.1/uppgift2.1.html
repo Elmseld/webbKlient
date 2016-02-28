@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<title>Uppgift 2.1</title>
+	</head>
+	
+	<body>
+	<h1>Uppgift 2.1 Grunderna i CSS3</h1>
+	<nav>
+		<h2>Resterade uppgifter</h2>
+		<ul>
+			<li><a href="../2.2/Uppgift2.2.html">2.2 Text och listor</a></li>
+			<li><a href="../2.3/uppgift2.3.html">2.3 Marginaler kantlinjer och paddning</a></li>
+			<li><a href="../2.4/uppgift2.4.html">2.4 Bilder och bakgrunder</a></li>
+			<li><a href="../2.5/uppgift2.5.html">2.5 Navigering</a></li>
+			<li><a href="../2.6/uppgift2.6.html">2.6 Tabeller och formulär</a></li>
+			<li><a href="../2.7/uppgift2.7.html">2.7 Sidlayout</a></li>
+			<li><a href="../2.8/uppgift2.8.html">2.8 Anpassning till olika enheter</a></li>
+			<li><a href="../2.9/uppgift2.9.squirrel.html">2.9 Nedladdad font</a></li>
+			<li><a href="../2.10/uppgift.2.10.html">2.10 Övergångar</a></li>
+		</ul>
+	</nav>
+		
+		<h2>Externt länkad CSS-fil och dess fördelar</h2>
+		<p>En externt länkad CSS-fil är när CSS element för att styla en hemsida ligger i en separat fil(style sheet) från den html-sida som den stylar, detta har flera fördelar;</p>
+	<ul>
+		<li>CSS-koden blir återanvändningsbar och kan länkas till domänens alla sidor istället för att varje sida ska stylas för hand.</li>
+		<li>Det gör redigering lättare, när det bara behövs i en fil istället för flera.</li>
+		<li>CSS-filen(style sheet) behöver bara laddas en gång vilket gör sidan snabbare då samma kod inte behöver laddas ner varje gång man byter sida på domänen.</li>
+		<li>Den gör html-dokumentet renar och enklare att läsa både för maskin och webutvecklare.</li>
+	</ul>
+	
+		<h2>Arv</h2>
+			<p>Arv betyder i detta sammanhag att element nästlade i andra element ärver deras css-egenskaper, tex ett p element ligger alltid inuti body element och 							skulle därför ärva de egenskaper man ger till body elementet. Arv går även i flera generationer om tex p elementet innehöll ett strong element skulle 						även detta ärva body elementets egenskaper.</p>
+	
+		<h2>Cascade</h2>
+			<p>Cascade är de regler som finns för hur stilar ska appliceras på HTML elementen ifall krockar ser mellan fler stilmallar(style sheets) uppstår, vilket kan 					uppstå när ett element ärver motsägande egenskaper från flera förfädrar eller när CSS-egenskaper kommer från olika håll tex <code>&lt;p 													class="exampel1"&gt;</code> skulle kunna få egenskaper både från p elementet och class elementet(Klass exampel1).</p>
+			<p>Reglerna ser ut som följande;</p>
+			
+			<h3>Närmast förfader vinner</h3>
+				<p>Vid arv i flera generationer är det alltid den förfadern som är närmasts egenskaper som används vid en konflikt om tex body elementet är stylat med en 					font-storlek och p elementet med en annan kommer strong elementet som ligger i p elementet få p elementet font-storlek.</p>
+			<h3>Direkt-applicerad stil vinner</h3>
+				<p>Stil-egenskaper som är skrivat direkt till ett element kommer alltid att vinna, har strong elementet tex fått en egen font-size tillskriven till sig 						kommer denna alltid slå font-sizen från p elementet.</p>
+			<h3>Flest poäng vinner</h3>
+			<p>Det finns ett poängsystem för räkna ut vilken stil som ska appliceras vid konflikter;</p>
+			<ul>
+				<li>En tag selektor är värd 1 poäng</li>
+				<li>En klass selektor är värd 10 poäng</li>
+				<li>En ID selektor är värd 100 poäng</li>
+				<li>En inline stil är värd 1000 poäng</li>
+			</ul>	
+	
+			<h3>Sista alternativet, stilen som är sist skriven vinner</h3>
+			<p>Som sista alternativ om inget av ovan sätt har kunna lösa konflikten, vinner koden som står skriven sist i dokumentet.</p>
+	
+		<h2>Selektorer (tagg-, attribut-, klass-, id- och barn-selektorer)</h2>
+		<p>En selektor är det som anger vilket element som ska stylas med CSS, exempel;</p>
+		<h3>tagg-selektorer</h3>
+		<ul>
+			<li>p</li>
+			<li>body</li>
+			<li>h1, h2, h3 etc</li>
+	</ul>
+	<p>Allt som står först i taggar.</p>
+		
+		<h3>attribut-selektorer</h3>
+		<p>De olika attribut som finns i taggar, tex title(inte &lt;title&gt;, utan tex &lt;img title), href, type="text"</p>
+		
+		<h3>klass-selektorer</h3>
+		<p>Det de som står efter <code>class="</code> i en tagg</p>
+		
+		<h3>id-selektorer</h3>
+		<p>Det som står efter <code>id="</code> i en tagg</p>
+		
+		<h3>barn-selektorer</h3>
+		<p>Används för att applicera stil på barn element och ser ut så här exempel, body > h1 och skulle då påverka att h1 element som ligger i ett body element men 			h1 element som finns utanför ett body element ignoreras.</p>
+		
+		<h2>Enheter (absoluta: in, cm, mm, pt, pc och relativa: em, ex, px, %)</h2>
+		<p>Absoluta enheter är såna enheter som är lika stor helt oberoende på enhet och upplösning, tex in(inch), cm, mm, pt(point) och pc(pica) medans relativa är såna som variera i storlek beroende på enhet och upplösning, tex en px(pixel) är inte densamma på en dator som en telefon.</p>
+		
+		<h2>	Hur ett CSS-dokument är uppbyggt</h2>
+		<p>Ett CSS_dokument är egentligen bara uppbyggt med två delar, första delen är selektor, tex en id, tagg eller attribut-selektor som anger vilka element som 				ska stylas, andra delen är deklarationsblocket som omges av ett par {} där man anger de olika stiltyper som ska appliceras på elementen utvalda av selektorn, detta görs i deklarationer, varje deklaration innehåller en Property, vad som ska ändras tex color, font etc och ett value tex en färg eller en storlek  ett exempel skulle kunna se ut såhär;</p>
+	<pre><code>p {color:red; font-size:1.5em;}</code></pre>
+	<p>här är;</p>
+	<ul>
+		<li>selektor = p</li>
+		<li>deklarationsblock = {color:red; font-size:1.5em;}</li>
+		<li>deklaration = color:red; &amp; font-size:1.5em;</li>
+		<li>Property = color &amp; font-size</li>
+		<li>value = red &amp; 1.5em</li>
+	</ul>
+	
+	</body>
+</html>

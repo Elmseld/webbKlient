@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+	<head>
+	<meta charset="utf-8">
+	<title>Uppgift 1.4</title>
+	</head>
+	
+	<body>
+	<h1>Uppgift 1.4 Formulär</h1>
+		
+	<form id="createform" method="get" action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
+		<p><i>Snälla fyll i detta formulär för att bli medlem på sidan..</i></p>
+		
+		<fieldset>
+		<legend>Inloggningsuppgifter</legend>
+		<label for="username">Användarnamn</label>
+			<input type="text" id="username" placeholder="användarnamn" autofocus required><br>
+		<label for="password">Lösenord</label>
+			<input type="password" id="password" pattern="[0-9]*" title="endast siffror" placeholder="lösenord, endast siffror" required><br>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Om dig</legend>
+			<label>Lite om dig<br><textarea id="interests" placeholder="skriva gärna några rader om dig själv."></textarea></label>
+			
+			<label for="intres">Intressen</label>
+			<input type="text" id="intres" list="intr">
+			<datalist id="intr">
+				<option>Djur och natur</option>
+				<option>Mc och bilar</option>
+				<option>Sy och virka</option>
+			</datalist>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Vilka husdjur har du?</legend>
+		<label for="dog" title="Hund">Hund</label>
+			<input type="checkbox" id="dog">		
+		<label for="cat">Katt</label>
+			<input type="checkbox" id="cat">		
+		<label for="bunny">kanin</label>
+			<input type="checkbox" id="bunny">		
+		<label for="horse">Häst</label>
+			<input type="checkbox" id="horse">
+		</fieldset>
+		
+				<fieldset>
+		<legend>Hur långt hår har du?</legend>
+		<label><input type="radio" name="hair" value="inget" checked>Inget</label>
+		<label><input type="radio" name="hair" value="kort">Kort</label>
+		<label><input type="radio" name="hair" value="medium">Medium</label>		
+		<label><input type="radio" name="hair" value="långt">Långt</label>
+		</fieldset>
+		
+		<fieldset>
+			<legend>Yrke</legend>
+			<select>
+				<optgroup label="Barnomsorgen">
+					<option value="bskotare">Barnskötare</option>
+					<option value="flarare">Förskolelärare</option>
+					<option value="resurs">Resurs</option>
+				</optgroup>
+				
+				<optgroup label="IT">
+					<option value="programer">Programmerare</option>
+					<option value="pledare">Projektledare IT-projekt</option>
+					<option value="natverktek">Nätverkstekniker</option>
+				</optgroup>
+			</select>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Kontaktuppgifter</legend>
+			<label>Email<input type="email"></label><br>
+			<label>Hemsida<input type="URL" value="" name="URLbox"></label><br>
+			<label>Ålder<input type="number" min="0" max="200" step="1"></label><br>
+			<label>Vikt<input type="range" min="20" max="500" step="1" value="65"></label><br>
+			<label>Födelsedatum<input type="datetime-local" value="1985-01-12 12:00"></label><br>
+			<label>Fick barn<input type=date value="2016-01-01"></label><br>
+			<label>Favoritmånad i år<input type="month" value="2016-01"></label><br>
+			<label>Semesterstart<input type="week" value="2016-W01"></label><br>
+			<label>Favorittid på dygnet<input type="time" value="10:00"></label><br>
+			<label>Datorupplösning<keygen name="key" challenge="235ldahlae983dadfar"/></label>
+		</fieldset>
+		
+		<input type="image" src="folderCheck.png" alt="CheckSign">
+		<input type="submit">
+		<input type="reset">
+		<input type="button" value="Click!" onclick="alert('Utan javascript händer det inte så mycket!')">
+		</form>
+		<br>
+		
+		
+	<form id="fileform" method="post" enctype="multipart/form-data" action="http://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi">
+	<fieldset>
+		<legend>Ladda upp en fil</legend>
+		<input type="file" name="file"/>
+		<input type="submit" value="Upload File">
+	</fieldset>	
+	</form>
+		
+	</body>
+</html>

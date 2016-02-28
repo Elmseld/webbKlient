@@ -1,0 +1,27 @@
+article {
+	
+	padding: 20px;
+	margin: 10px auto;
+	
+	  -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+	
+		-webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+
+    -webkit-column-rule: 2px outset cornflowerblue;
+    -moz-column-rule: 2px outset cornflowerblue;
+    column-rule: 2px outset cornflowerblue;
+} 
+
+img {
+	padding: 20px; 
+	margin: 10px 12%;
+	max-width: 1000px;
+}
+
+a {
+	clear: both;
+}

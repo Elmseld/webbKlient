@@ -1,0 +1,61 @@
+a {
+	border: 1px solid;
+	padding: 5px;
+}
+img.floatex  {
+    float: right;
+}
+
+p, h2, h3 {
+    clear: both;
+}
+
+h2.tlpos {
+	position: absolute;
+	top: 710px;
+	left: 30px;
+}
+
+h2.brpos {
+	position: relative;
+	bottom: 20px;
+	right: 40px;
+}
+
+img.zhigh {
+	z-index: 1;
+}
+
+img.zlow {
+	position: relative;
+	right: 25px;
+	z-index: -1;
+}
+
+img.width {
+	width: 140px;
+}
+
+img.height {
+	height: 140px;
+}
+
+img.max-width {
+	max-width: 100px;
+}
+
+img.max-height {
+	max-height: 100px;
+}
+
+img.min-width {
+	min-width: 50px;
+}
+
+img.min-height {
+	min-height: 50px;
+}
+
+img.va {
+	vertical-align: text-top;
+}

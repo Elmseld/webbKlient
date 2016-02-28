@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 2.6</title>
+		<link href="uppgift2.6.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<h1>Uppgift 2.6 Tabeller och formulär</h1>
+		<p><a href="../2.1/uppgift2.1.html">Tillbaka till startsidan 2.1</a></p>
+		
+		<h2>Tabeller</h2>
+		
+		<h3>table-layout</h3>
+		<p>Sätter en tabells layout algoritm, standard är att kolumnens bredd är lika bred som de bredaste obrytbara innehållet i kolumnen men dett kan vara väldigt tidsödslande då hela innehållet i tabellen måste läsas igenom innan man kan sätta layouten, då kan attributet fixed vara bättre då den istället utgår från tabellers bredd och inte innehållet vilket gör att browsern kan börja skriva ut tabellen så fort den får första raden. Ser ut så här i kod:</p>
+		<pre><code>table-layout: fixed;</code></pre>
+		
+		<h3>border-collapse</h3>
+		<p>Med denna property kan man sätta om man vill att bordrarna i en tabell ska vara separerade eller kollapsa ihop utan mellanrum mellan, ett exempel;</p>
+		<pre><code>border-collapse: collapse;</code></pre>
+		
+		<table id="collapse">
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td>Fjärde cell</td>
+		</tr>
+		</table>
+		
+		<p>Utan collapse</p>
+		<table>
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td>Fjärde cell</td>
+		</tr>
+		</table>
+		
+		<h3>border-spacing</h3>
+		<p>Denna property sätter hur stort mellanrummet mellan borderna ska vara, kräver att de inte är kollapsat med föregående kod, ett exempel;</p>
+		<pre><code>border-spacing: 15px 25px</code></pre>
+		<p>Första värdet är för horisontellt mellanrum och de andra för vertikalt, om man bara anger ett värdet räknas de som värdet för båda.</p>
+		
+		<table id="spacing">
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td>Fjärde cell</td>
+		</tr>
+		</table>
+		
+		<p>Utan spacing</p>
+		<table>
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td>Fjärde cell</td>
+		</tr>
+		</table>
+		
+		<h3>caption-side</h3>
+		<p>Med denna property kan man ställa in om man vill ha tabellens ev titel över eller under tabellen, standard är över, ett exempel;</p>
+		<pre><code>caption-side: bottom;</code></pre>
+		
+		<table id="caption">
+			<caption>Titel</caption>
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td>Fjärde cell</td>
+		</tr>
+		</table>
+		
+		<p>Standard caption</p>
+		<table>
+		<caption>Titel</caption>
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td>Fjärde cell</td>
+		</tr>
+		</table>
+		
+		<h3>empty-cells</h3>
+		<p>Med denna property kan man bestämma om en tabell ska visa border och bakgrund på tomma celler eller inte, standard är att de syns men med hide värdet kan man dölja dessa. Ett exempel;</p>
+		<pre><code>empty-cells: hide;</code></pre>
+		
+		<table id="empty">
+		<caption>Titel</caption>
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td></td>
+		</tr>
+		</table>
+		
+		<p>Utan empty cells</p>
+		<table>
+		<caption>Titel</caption>
+		<tr>
+			<td>första cell</td>
+			<td>Andra cell</td>
+		</tr>
+		<tr>
+			<td>Tredje cell</td>
+			<td></td>
+		</tr>
+		</table>
+	
+		<h2>Använda CSS med formulär</h2>
+		<p>När man stylar ett formulär är det viktig att formuläret fortfarande är tydligt, vilket sätter vissa begränsningar på stylingen om användaren missar att fylla i en ruta för att den är otydlig kan datan som skickas in med ett formulär bli ofullständig vilket kan bli problematiskt. Eftersom de flesta elementen i ett formulär ligger i input taggen(&lt;inpot&gt;) är det inte särskilt lämpligt att använda denna tag för att stilsätta elementen, och då de är oftast ganska många kan de bli både plottrigt och mycket extra jobb att använda klasser för stilsättning. Då är attribut bästa sättet, då får man med alla input element med samma attribut men lämnar de input element som är något annat, ett exempel kan se ut som följande;</p>
+		<pre><code>input[type="text"] {
+background-color: blue;
+}</code></pre>
+		
+		<p>Backgrunden blir bara blå i de fält som har type=text och inte de som har type=password.</p>
+		
+		<form>
+		<fieldset>
+		<legend>Inloggningsuppgifter</legend>
+		<label for="username">Användarnamn</label>
+			<input type="text" id="username" placeholder="användarnamn" autofocus required><br>
+		<label for="password">Lösenord</label>
+			<input type="password" id="password" pattern="[0-9]*" title="endast siffror" placeholder="lösenord, endast siffror" required><br>
+		</fieldset>
+		</form>
+				
+	</body>
+</html>

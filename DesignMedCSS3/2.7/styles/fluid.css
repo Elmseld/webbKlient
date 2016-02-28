@@ -1,0 +1,46 @@
+h1, h2 {
+	text-align: center;
+}
+
+header{
+	border: 1px solid;
+	position: relative;
+	margin: 2% auto;
+	max-width: 100%;
+}
+
+aside.left {
+	border: 1px solid;
+	position: relative;
+	margin: 2% auto;
+	width: 20%;
+	min-height: 600px;
+	float: left;
+}
+
+article {
+	border: 1px solid;
+	position: relative;
+	margin: 4% auto;
+	max-width: 55%;
+	min-height: 600px;
+	
+}
+
+aside.right {
+	border: 1px solid;
+	position: relative;
+	margin: 2% auto;
+	width: 20%;
+	min-height: 600px;
+	float: right;
+}
+
+footer {
+	border: 1px solid;
+	position: relative;
+	margin: 2% auto;
+	max-width: 100%;
+	min-height: 50px;
+	clear: both;
+}

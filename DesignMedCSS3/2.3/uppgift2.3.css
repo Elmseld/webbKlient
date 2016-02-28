@@ -1,0 +1,167 @@
+#m-top {
+	margin-top: 3em;
+}
+
+#m-bottom {
+	margin-bottom: 3em;
+}
+
+#m-right {
+	margin-right: 3em;
+}
+
+#m-left {
+	margin-left: 3em;
+}
+
+
+#top {
+	border-top: thick double #ff0000;
+}
+
+#bottom {
+	border-bottom: thick double rgb(237, 117, 239);
+}
+
+#right {
+	border-right: thick double aquamarine;
+}
+
+#left {
+	border-left: thick double hsl(126, 79%, 70%);
+}
+
+
+#t-color {
+	border-style: solid none none none;
+	border-top-color: aqua;
+}
+
+#b-color {
+	border-style: none none solid none;
+	border-bottom-color: pink;
+}
+
+#r-color {
+	border-style: none solid none none;
+	border-right-color: green;
+}
+
+#l-color {
+	border-style: none none none solid;
+	border-left-color: brown;
+}
+
+#t-style {
+	border-top-style: dotted;
+}
+
+#b-style {
+	border-bottom-style: dashed;
+}
+
+#r-style {
+	border-right-style: solid;
+}
+
+#l-style {
+	border-left-style: double;
+}
+
+#t-width {
+	border-style: solid none none none;
+	border-top-width: 15px;
+}
+
+#b-width {
+	border-style: none none solid none;
+	border-bottom-width: thin;
+}
+
+#r-width {
+	border-style: none solid none none;
+	border-right-width: thick;
+}
+
+#l-width {
+	border-style: none none none solid;
+	border-left-width: .5cm;
+}
+
+
+#padd-t {
+	padding-top: 2em;
+}
+
+#padd-b {
+	padding-bottom: 15px;
+}
+
+#padd-r {
+	padding-right: 50%;
+}
+
+#padd-l {
+	padding-left: 70%;
+}
+
+
+#o-color {
+	outline-style: dotted;
+	outline-color: blue;
+}
+
+#o-style {
+	outline-style: double;
+}
+
+#o-width {
+	outline-style: dotted;
+	outline-width: thin;
+}
+
+#hidden {
+	visibility: hidden;
+}
+
+#clip {
+	position: absolute;
+	clip: rect(1px,200px,200px,1px);
+}
+
+#display {
+	background-color: bisque;
+  display: inline;
+}
+
+#scroll {
+	background-color: #00FFFF; 
+	width: 200px; 
+	height: 150px; 
+	overflow: scroll;
+}
+
+canvas {
+border: 1px solid black;
+}
+
+canvas#trans {
+	background-color: rgb(133, 117, 239);
+	opacity: 0.5;
+}
+
+canvas#radius {
+	    border-radius: 25px;
+}
+
+canvas#multi {
+	background-image: url(../img/Heart.png), url(../img/folderCheck.png);
+}
+
+canvas#shadow {
+	box-shadow: 10px 10px;
+}
+
+canvas#grad {
+	background-image: -webkit-linear-gradient(left, pink, blue);
+}

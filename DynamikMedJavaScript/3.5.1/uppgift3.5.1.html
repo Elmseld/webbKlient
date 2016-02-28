@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 3.5.1</title>
+		<link href="uppgift3.5.1.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>		
+		<script src="uppgift3.5.1.js"></script>	
+	</head>
+
+	<body>
+	<h1>Uppgift 3.5.1 Effekter och animationer</h1>
+		
+		<h2>Visar och gömmer ett HTML-element</h2>
+		<p id="sht">Lite text</p>
+		<input type="button" onclick="showB()" value="show">
+		<input type="button" onclick="hideB()" value="hide">
+		<input type="button" onclick="toggleB()" value="toggle">
+		
+		<h2>Fadar in ouch ut ett HTML-element</h2>
+		<input type="button" onclick="ffff()" value="fadeIn, fadeOut, fadeToggle, fadeTo">
+		<div id="fadeIn"></div><br>
+		<div id="fadeOut"></div><br>
+		<div id="fadeToggle"></div>
+		<div id="fadeTo"></div>
+		
+		
+		<h2>Förändrar ett HTML-elements stilsättning (animate)</h2>
+		<h3>Easing (linear eller swing) till animationen och testa med olika hastigheter</h3>
+		<h3>Att en händelse sker efter animationen är klar (callback funktion)</h3>
+		
+		<input type="button" onclick="anim()" value="animate">
+		<div id="animateB"></div>
+		
+
+						
+	</body>
+</html>

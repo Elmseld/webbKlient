@@ -1,0 +1,28 @@
+@media (max-device-width: 480px) {
+	
+	h1, h2, p {
+		font-style: oblique;
+		color: palevioletred;
+	}
+}
+
+@media (min-device-width: 481px) {
+	
+	h1 {
+		font-size: 40px;
+		font-style: normal;
+		font-family: sans-serif;
+	}
+}
+
+@media (orientation: landscape) {
+	body {
+		background-color: salmon;
+	}
+}
+
+@media (orientation: portrait) {
+	body{
+		background-color: violet;
+	}
+}

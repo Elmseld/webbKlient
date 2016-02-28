@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 2.7</title>
+		<link href="styles/uppgift2.7.css" rel="stylesheet">
+	</head>
+	<body>
+		<header><h1>Uppgift 2.7 Sidlayout</h1></header>
+			<p><a href="../2.1/uppgift2.1.html">Tillbaka till startsidan 2.1</a></p>
+
+		
+		<h2>Webbsideslayout (fixerad, flytande och elastisk) (fixed, fluid, and elastic)</h2>
+		<p>Det finns olika begrepp för ur man kan bygga upp en webbsideslayout, en fixerad layout skapas genom att man använder fasta mått för att positionera de olika elementen på en hemsida, detta gör att hemsidan alltid ser likadan ut oberoende av vilken enhet man använder, detta kan dock gör att använder på små enheter, tex. smartphones måste scrolla horizontelt för att se hela innehållet vilket inte blir så användarvänligt. En fördel är däremot att designen på en hemsida kommer alltid se ut som man tänkt oberoende på enhet.</p>
+		<p>Med en flytande layout däremot använder man istället procentuella mått när man placerar ut elementen på sidan vilket gör att de anpassar sig efter olika storlek på användarnas skärmar,  detta gör den mer användarvänlig men också svårare att hålla koll på hur designen kommer att se ut på olika skärmar.</p>
+		<p>Man kan också använda en elastisk layout, vilket är lite av en blandning mellan de två föregångarna, där alla mått sätts med em, vilket gör att storleken på hemsidan anpassas efter textstorleken men inte efter skärmstorleken, denna layout kan vara väldigt användarvänlig men kan också leda till mer extra arbete men testning etc. vilket inte alltid kan kännas värt det.</p>
+		
+		<a href="fixed.html">Fixerad Layout</a>
+		<a href="fluid.html">Flytande Layout</a>
+		<a href="elastic.html">Elastisk Layout</a>
+		<a href="fluidtext.html">Webbsida med texten som flöda mellan flera kolumner</a>
+		
+		<h2>Varför man ska använda CSS och inte tabeller</h2>
+		<p>Tabeller är inte gjorde för att skapa en webbsideslayout så försöker man göra de ändå leder det till mycket extra arbete, extra mycket och plottrig htmlkod som senare kan bli besvärlig att modifiera.</p>
+		
+		<h2>Position</h2>
+		<h3>position</h3>
+		<p>Specifierar typen av postions metod som används för att positionera ett element, tex, static, relative, absolute eller fixed. ett exempel skulle se ut såhär i kod;</p>
+		<pre><code>position: absolute;</code></pre>
+		
+		<h3>top, left, bottom, right</h3>
+		<p>Dessa propertys sätter alla avståndet till antingen element runt sig när propertyn position har attributet absolute och i relation till sin naturliga utgångspunkt om position har attributet relative, top för topmåttet, left för vänstermåttet, bottom för bottenplacering och right för högerplacering. Ett exempel kan se ut såhär i kod;</p>
+		<pre><code>position: absolute;
+		top: 710px;
+		left: 30px;</code></pre>
+		<p>Skulle se ut såhär;</p>
+		<h2 class="tlpos">Ett exempel på en absolute position med top och vänster som fasta mått.</h2>
+		<br>
+		<p>utan stil skulle de se ut såhär;</p>
+		<h2>Ett exempel utan en absolute position med top och vänster som fasta mått.</h2>
+		
+		<p>Eller såhär;</p>
+		<pre><code>position: relative;
+		bottom: 20px;
+		right: 40px;</code></pre>
+		<p>Skulle se ut såhär:</p>
+		<h2 class="brpos">Ett exempel på en relative position med botten och höger som fasta mått.</h2>
+		<p>Utan stil skulle de se ut såhär;</p>
+		<h2>Ett exempel utan en relative position med botten och höger som fasta mått.</h2>
+		
+		<h3>z-index</h3>
+		<p>z-index sätter vilket element som ska vara framför ett annat om båda elementen ligger på samma eller delvis samma plats, den med högst z-index ligger främst, detta genom att ange dess position i stacken. Ett exmepel i kod;</p>
+		<pre><code>img.zhigh {
+	z-index: 1;
+}
+
+img.zlow {
+	position: relative;
+	right: 25px;
+	z-index: -1;
+}</code></pre>
+		
+		<p>ser ut såhär;</p>
+		<img class="zhigh" src="../img/Heart.png" alt="översta bilden">
+		<img class="zlow" src="../img/folderCheck.png" alt="undre bilden">
+		<p>Då hjärtat(zhigh) har ett högre z-index än den andra bilden ligger de över.</p>
+		
+		<h3>float</h3>
+		<p>float bestämmer om ett element ska flyta eller inte och i så fall till höger eller vänster, så här kan ett exempel se ut i kod;</p>
+		<pre><code>img.floatex  {
+    float: right;
+}</code></pre>
+		<p>Skulle se ut såhär;</p>
+		<img class="floatex" src="../img/bildstor.jpg" alt="flytande bild" width="400">
+		
+		<h3>clear</h3>
+		<p>Med clear sätter man om man inte vill att element ska flyta runt ett  flytande element på en eller båda dess sidor, ett exempel i kod kan se ut såhär;</p>
+		<pre><code>p, h2, h3  {
+    clear: both;
+}</code></pre>
+		<p>Detta exempel används på bilden ovan för att inte detta stycke ska ligga till vänster om bilden.</p>
+		
+		<h2>Storlek</h2>
+		<h3>width</h3>
+		<p>Denna property används för att sätta bredden på ett element, detta dock utan padding, border och margin det är bara elementet i mitten som anges av width. max-width och min-width åtsidosätter  width propertyn. Ett exempel på hur width kan användas i kod;</p>
+		<pre><code>width: 140px;</code></pre>
+		<p>Skulle se ut såhär;</p>
+		<img class="width" src="../img/bildstor.jpg" alt="testbild för width">
+		
+		<h3>height</h3>
+		<p>Denna property används för att sätta höjden på ett element, detta dock utan padding, border och margin det är bara elementet i mitten som anges av height. max-height och min-height åtsidosätter  height propertyn. Ett exempel på hur height kan användas i kod;</p>
+		<pre><code>height: 140px;</code></pre>
+				<p>Skulle se ut såhär;</p>
+		<img class="height" src="../img/bildstor.jpg" alt="testbild för height">
+		
+		<h3>max-width</h3>
+		<p></p>
+		<p>Denna property sätter max bredden för ett element, ett element kan aldrig bli bredare än max-width, ett exempel i kod;</p>
+		<pre><code>max-width: 100px;</code></pre>
+		<p>Skulle se ut såhär;</p>
+		<img class="max-width" src="../img/bildstor.jpg" alt="testbild för max-width">
+		
+		
+		<h3>max-height</h3>
+		<p>Denna property sätter max höjden för ett element, ett element kan aldrig bli högre än max-height, ett exempel i kod;</p>
+		<pre><code>max-height: 100px;</code></pre>
+		<p>Skulle se ut såhär;</p>
+		<img class="max-height" src="../img/bildstor.jpg" alt="testbild för max-height">
+		
+		<h3>min-width</h3>
+		<p>Denna property sätter minsta bredden för ett element, ett element kan aldrig bli smalare än min-width, denna propert åtsidosätter både width och max-width, ett exempel i kod;</p>
+		<pre><code>min-width: 50px;</code></pre>
+		<p>Skulle se ut såhär;</p>
+		<img class="min-width" src="../img/bildstor.jpg" alt="testbild för min-width">
+		
+		<h3>min-height</h3>
+		<p>Denna property sätter minsta höjden för ett element, ett element kan aldrig bli lägre än min-height, denna propert åtsidosätter både height och max-height, ett exempel i kod;</p>
+		<pre><code>min-height: 50px;</code></pre>
+		<p>Skulle se ut såhär;</p>
+		<img class="min-height" src="../img/bildstor.jpg" alt="testbild för min-height">
+		
+		<h3>vertical-align</h3>
+		<p>Denna property justerar om man vill sänka eller höja ett element vertikalt, eller om man vil att olikstora element ska följas åt i tex under(standard) eller överkant, ett exempel när de följs åt i överkant;</p>
+		<pre><code>vertical-align: text-top;</code></pre>
+		<p>Detta hela raden att följa överlinjen <img class="va" src="../img/folderCheck.png" alt="bild som följer överkanten"> istället för den undre som är standard.</p>
+			
+	</body>
+</html>

@@ -1,0 +1,16 @@
+article {
+	color: darkcyan;
+	font-weight: bold;
+	background: ivory;
+	border: 1px dashed;
+	-webkit-transition: all 1.5s;
+	transition: all 1.5s;
+}
+
+article:hover {
+	color: darkmagenta;
+	font-weight: bold;
+	font-style: italic;
+	background: azure;
+	border: 1px dotted;
+}

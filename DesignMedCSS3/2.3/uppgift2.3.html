@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 2.3</title>
+		<link href="uppgift2.3.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<h1>Uppgift 2.3 Marginaler, kantlinjer och paddning</h1>
+		<p><a href="../2.1/uppgift2.1.html">Tillbaka till startsidan 2.1</a></p>
+		
+		<h2>boxmodell</h2>
+			<p>Boxmodellen bygger på att webbläsaren ser varje tagg element på en hemsida som små boxar med innehåll</p>
+			<h3>marginal(margin)</h3>
+				<p>Marginalen är var som separera en tagg från en annan. Det är mellanrummet mellan två paragrafer till exempel.</p>
+			<h3>kantlinje(border)</h3>
+				<p>Kantlinjen är den linje som markerar ut varje kant på en box, du kan ha en kantlinje runt att alla fyra sidor eller bara någon eller några.</p>
+			<h3>paddning</h3>
+				<p>Padding är mellanrummet mellan innehållet och kantlinjen, padding är var som separerar en bild från kanten som omsluter bilden.</p>
+			<h3>innehåll(content)</h3>
+				<p>Innehåll är de innehåll som ska fylla sidan, tex, bilder, ljud mm.</p>
+		
+		<h2>Marginaler</h2>
+		<h3>margin-top</h3>
+			<p>margin-top sätter marginalen över ett element, <code>margin-top: 3em;</code> skulle se ut såhär;</p>
+			<p id="m-top">Exempel på margin-top: 3em;</p>
+		<h3>margin-right</h3>
+			<p>margin-right sätter marginalen till höger om ett element</p>
+			<p id="m-right">Exempel på margin-right: 3em;</p>
+		<h3>margin-bottom</h3>
+			<p>margin-bottom sätter marginalen under ett element</p>
+			<p id="m-bottom">Exempel på margin-bottom: 3em;</p>
+		<h3>margin-left</h3>
+			<p>margin-left sätter marginalen till vänster om ett element</p>
+			<p id="m-left">Exempel på margin-left: 3em;</p>
+		
+		<h2>Kantlinjer</h2>
+		<h3>border-top</h3>
+			<p>Samlar och sätter alla border-top element(border-top-width, border-top-style och border-top-color i den ordningen) på samma plats, exempel skulle vara <code>border-top: thick double #ff0000;</code> Och se ut;</p>
+			<p id="top">Exempel på border-top: thick double #ff0000;</p>
+		
+		<h3>border-right</h3>
+			<p>Samlar och sätter alla border-right element(border-right-width, border-right-style och border-right-color i den ordningen) på samma plats, exempel skulle vara <code>border-right: thick double aquamarine;</code> Och se ut;</p>
+			<p id="right">Exempel på border-right: thick double aquamarine;</p>		
+		
+		<h3>border-bottom</h3>
+			<p>Samlar och sätter alla border-bottom element(border-bottom-width, border-bottom-style och border-bottom-color i den ordningen) på samma plats, exempel skulle vara <code>border-bottom: thick double rgb(237, 117, 239);</code> Och se ut;</p>
+			<p id="bottom">Exempel på border-bottom: thick double rgb(237, 117, 239);</p>		
+		
+		<h3>border-left</h3>
+			<p>Samlar och sätter alla border-left element(border-left-width, border-left-style och border-left-color i den ordningen) på samma plats, exempel skulle vara <code>border-left: thick double hsl(126, 79%, 70%);</code> Och se ut;</p>
+			<p id="left">Exempel på border-left: thick double hsl(126, 79%, 70%);</p>		
+		
+		<h3>Border Color</h3>
+		<p>Om man inte vill använda alla tre border element kan man istället bara använda de man vill ändra, tex color. Dock måste man då deklarera border-style först för att ha något att ändra, tex <code>border-style: solid;</code></p>
+		<h4>border-top-color</h4>
+			<p>Kod för att ändra border-top-color <code>border-top-color: aqua; </code></p>
+			<p id="t-color">Exempel på border-top-color: aqua;</p>
+		<h4>border-right-color</h4>
+			<p>Kod för att ändra border-right-color <code>border-right-color: pink; </code></p>
+			<p id="r-color">Exempel på border-right-color: pink;</p>
+		<h4>border-bottom-color</h4>
+			<p>Kod för att ändra border-bottom-color <code>border-bottom-color: green; </code></p>
+			<p id="b-color">Exempel på border-bottom-color; green;</p>
+		<h4>border-left-color</h4>
+			<p>Kod för att ändra border-left-color <code>border-left-color: brown; </code></p>
+			<p id="l-color">Exempel på border-left-color: brown;</p>
+		
+		<h3>Border Style</h3>
+		<p>Vill man bara ändra stilen på en border kan man använda sig av border-den sidan man vill förändra-style.</p>
+		<h4>border-top-style</h4>
+			<p>Koden för att ändra på border-top-style <code>border-top-style: dotted;</code></p>
+			<p id="t-style">Exempel på border-top-style: dotted;</p>
+		<h4>border-right-style</h4>
+			<p>Koden för att ändra på border-right-style <code>border-right-style: solid;</code></p>
+			<p id="r-style">Exempel på border-right-style: solid;</p>		
+		<h4>border-bottom-style</h4>
+			<p>Koden för att ändra på border-bottom-style <code>border-bottom-style: dashed;</code></p>
+			<p id="b-style">Exempel på border-bottom-style: dashed;</p>		
+		<h4>border-left-style</h4>
+			<p>Koden för att ändra på border-left-style <code>border-left-style: double;</code></p>
+			<p id="l-style">Exempel på border-left-style: double;</p>		
+		
+		<h3>Border Width</h3>
+		<p>Vill man förändra bredden på en border kan man använda sig av border-den sidan man vill förändra-width. Dock måste man då deklarera border-style först för att ha något att ändra, tex <code>border-style: solid;</code></p>
+		<h4>border-top-width</h4>
+			<p>Koden för att förändra border-top-width tex <code>border-top-width: 15px;</code></p>
+			<p id="t-width">Exempel på border-top-width: 15px;</p>
+		<h4>border-right-width</h4>
+			<p>Koden för att förändra border-right-width tex <code>border-right-width: 150%;</code></p>
+			<p id="r-width">Exempel på border-right-width: 150%;</p>		
+		<h4>border-bottom-width</h4>
+			<p>Koden för att förändra border-bottom-width tex <code>border-bottom-width: thin;</code></p>
+			<p id="b-width">Exempel på border-bottom-width: thin;</p>		
+		<h4>border-left-width</h4>
+			<p>Koden för att förändra border-left-width tex <code>border-left-width: .5cm;</code></p>
+			<p id="l-width">Exempel på border-left-width: .5cm;</p>
+		
+		<h2>Paddning</h2>
+		<h3>padding-top</h3>
+		<p>Sätter mellanrummet mellan innehållet och element över, exempel i kod <code>padding-top: 2em;</code></p>
+		<p id="padd-t">Exempel på padding-top: 2em;</p>
+		<h3>padding-right</h3>
+		<p>Sätter mellanrummet mellan innehållet och element till höger, exempel i kod <code>padding-right: 50%;</code></p>
+		<p id="padd-r">Exempel på padding-right: 50%;</p>
+		<h3>padding-bottom</h3>
+		<p>Sätter mellanrummet mellan innehållet och element under, exempel i kod <code>padding-bottom: 15px;</code></p>
+		<p id="padd-b">Exempel på padding-bottom: 15px;</p>
+		<h3>padding-left</h3>
+		<p>Sätter mellanrummet mellan innehållet och element till vänster, exempel i kod <code>padding-left: 70%;</code></p>
+		<p id="padd-l">Exempel på padding-left: 70%;</p>
+		
+		<h2>Outlines</h2>
+		<p>En outline är en linje som är dragen runt ett element, utanför kantlinjen för att få elementet att sticka ut.</p>
+		<h3>outline-color</h3>
+		<p>Denna property används för att ändra färgen på en outline, och som med de tidigare color-elementen kräver de att man deklarerar stilen först genom tex <code>outline-style: dotted;</code> för att de ska finns något att förändra. Ett exempel på outline-color kan var; <code>outline-color: blue;</code> och skulle se ut såhär;</p>
+		<p id="o-color">Ett Exempel på outline-color: blue;</p>
+		<h3>outline-style</h3>
+		<p>Denna property sätter stilen på outlinen ett exempel, <code>outline-style: double;</code></p>
+		<p id="o-style">Ett Exempel på outline-style: double;</p>
+		<h3>outline-width</h3>
+		<p>Denna property sätter tjockleken på outlinen ett exempel, <code>outline-width: thin;</code></p>
+		<p id="o-width">Ett Exempel på outline-width: thin;</p>
+		
+		
+		<h2>Synlighet</h2>
+		<h3>visibility</h3>
+		<p>Denna property används för att sätta om ett element ska vara synligt eller inte, tex <code>visibility: hidden;</code> detta element kommer då inte synas men ändå ta upp samma område på hemsidan som om de hade synts, de skulle se ut såhär;</p>
+		<p id="hidden">Exempel på visibility: hidden;</p>
+		<h3>clip</h3>
+		<p>Denna property används för att kunna klippa ner bilder som tar för stor plats på hemsidan, skulle kunna se ut så här; <code>clip:rect(0px,60px,200px,0px);</code>fungerar bara på absoluta plaserade element. Se exempel längs ner.</p>
+
+		
+		<h3>display</h3>
+		<p>Specificerar typen av box använt för ett HTML element. Kodexempel; <code>display: inline;</code> skulle se ut såhär om man även la till en bakgrundsfärg;</p>
+		<p id="display">Exempel på display: inline;</p>
+		<h3>overflow</h3>
+		<p>Sätter vad som händer om ett element går utanför elementets box, tex kan man ange scroll om man vill kunna scrolla ner och se det som hamnat utanför eller hidden om man helt enkelt vill låta de vara dolt och oläsligt. Ett exempel; <code>background-color: #00FFFF; width: 200px; height: 150px; overflow: scroll;</code> skulle se ut så här;</p>
+		<p id="scroll">Exempel på overflow: scroll; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+		<h2>box</h2>
+		<h3>Som är transparant till en viss grad</h3>
+		<canvas id="trans" width="500" height="300"></canvas>
+		<p>Att få en färg transparant kan man göra antingen med alpha kanalen i RGBA eller HLSA där man ställer in transparensen på en skala mellan 0 och 1 detta kan också göras med opacity även där med skalan mellan 0 och 1, koden för opacity skulle vara <code>opacity: 0.5;</code> som i ovan resultat, samma resultat får du av <code>background-color: rgba(133, 117, 239, .5);</code></p>
+		
+		<h3>Som har rundade hörn</h3>
+		<canvas id="radius" width="500" height="300"></canvas>
+		<p>Med hjälp av propertyn border-radius kan man få en box med runda hörn, i exemplet ovan ser koden ut så här; <code>border-radius: 25px;</code> </p>
+		
+		<h3>Som har multippla bakgrundsbilder</h3>
+		<canvas id="multi" width="500" height="300"></canvas>
+		<p>För att lägga till multippla bakgrundsbilder använder man <code>background-image</code> i CSS och sen lägger man in de url man vill använda med ett komma mellan varje.</p>
+		
+		<h3>Som har skuggor</h3>
+		<canvas id="shadow" width="500" height="300"></canvas>
+		<p>Med hjälp av box-shadow kan man lägga till skuggor på sin box, detta funkar på samma vis som text-shadow i förra avsnittet, kräver ett värde för en h-shadow och en v-shadow resten av värdena är frivilliga, utan färg angiven blir skuggan svart, koden för ovanstående exempel; <code>box-shadow: 10px 10px;</code></p>
+		
+		<h3>Som har gradienter</h3>
+		<canvas id="grad" width="500" height="300"></canvas>
+		<p>Men hjälp av linear-gradient eller radial-gradient kan man skapa ett färgspel där en färg övergår till en annan, med den lineara sked detta från höger till vänster eller visevera och med radial från en punkt och utåt, ovanstående exempel är med linear och ser ut som så här; <code>background-image: -webkit-linear-gradient(left, pink, blue);</code>inom parantesen är det först från vilken riktning, sen första färgen och till sist andra färgen, man kan lägga till fler färger om man vill.</p> 
+		
+		<p>utan clip</p>
+		<img src="../img/bildstor.jpg" alt="stor bild">
+		<p>Med clip</p>
+		<img id="clip" src="../img/bildstor.jpg" alt="inte så stor bild">
+		
+	</body>
+</html>

@@ -1,0 +1,46 @@
+h1, h2, p {
+	text-align: center;
+}
+
+header{
+	border: 0.1em solid;
+	position: relative;
+	margin: 2em auto;
+	max-width: 120em;
+}
+
+aside.left {
+	border: 0.1em solid;
+	position: relative;
+	margin: 2em auto;
+	width: 20em;
+	height: 60em;
+	float: left;
+}
+
+article {
+	border: 0.1em solid;
+	position: relative;
+	margin: 4em auto;
+	max-width: 40em;
+	height: 60em;
+	
+}
+
+aside.right {
+	border: 0.1em solid;
+	position: relative;
+	margin: 2em auto;
+	width: 20em;
+	height: 60em;
+	float: right;
+}
+
+footer {
+	border: 0.1em solid;
+	position: relative;
+	margin: 2em auto;
+	max-width: 120em;
+	height: 10em;
+	clear: both;
+}

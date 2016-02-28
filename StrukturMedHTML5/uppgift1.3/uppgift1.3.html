@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8">
+	<title>Uppgift 1.3</title>
+</head>
+	
+<body>
+	<h1>Uppgift 1.3</h1>
+
+		<section>	
+		<h2>time med datetime</h2>
+		<p>time elementet (&lt;time&gt;) används för att beskriva tid och/eller datum på ett maskin-läsligt vis för text sökmotorer. I kod skulle detta kunna se ut 					som följande;</p>
+		<pre><code>&lt;time datetime="2016-01-13 10:36+01:00"&gt;Januari den 13&lt;sup&gt;de&lt;/sup&gt;2016 kl 10:36&lt;/time&gt;</code></pre>
+
+		<p>	Vilket skulle se ut såhär;</p>
+		<p>Just nu är det <time datetime="2016-01-13 10:36+01:00">Januari den 13<sup>de</sup> 2016 kl 10:36</time></p>
+
+		<p>time elementet i sig gör ingeting för det synliga resultatet utan detta är bara för att program ska den utskriva tiden.</p>
+		</section>
+	
+	<section>
+	<h2>mark</h2>
+	<p>Elementet mark (&lt;mark&gt;) används för att highlighta viktiga delar av tex ett citat. Koden frö detta ser ut såhär;</p>
+		<pre><code>&lt;p&gt;i ett citat står det&lt;mark&gt;någonting viktigt&lt/mark&gt; som jag vill ska synas lite extra tydligt.&lt;/p&gt;</code></pre>
+		
+		<p>Det skulle se ut så här;</p>
+		
+		<p>i ett cictat står det <mark>något viktigt</mark> som jag vill ska synas lite extra tydligt.</p>
+		<p>Standard är att highlighten är i gul men detta kan ändras med css, både till andra färger och för att gör texten bold eller kursiv.</p>
+	</section>
+	
+	<section>
+	<h2>wbr</h2>
+	<p>wbr elementet(&lt;wbr&gt;) används för att dela upp längre ord till flera rader, detta kan vara väldigt användbart när tex ska stå i trånga utrymmen, som tex 		tabell-celler, koden för detta skulle se ut som följer;</p>
+		<pre><code>&lt;p&gt;Ibland är ord bara lite för långa, som detta hårdvaru&lt;wbr&gt;inkompatibilitets&lt;wbr&gt;fel för att vara på en rad då är det skönt att kunna dela upp dem i två eller tre rader!&lt;/p&gt;</code></pre>
+		
+		<p>Vilket skulle se ut såhär;</p>
+		<p>Ibland är ord bara lite för långa, som detta hårdvaru<wbr>inkompatibilitets<wbr>fel för att vara på en rad då är det skönt att kunna dela upp dem i två eller tre rader!</p>
+		<p>Dock kräver koden ett trångt utrymme för att fungera, men i ett trångt utrymme har man kontroll var ett ord blir delat och att de blir delat.</p>
+	</section>
+	
+	</body>
+
+</html>

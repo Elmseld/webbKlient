@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 2.4</title>
+		<link href="uppgift2.4.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<h1>Uppgift 2.4 Bilder och bakgrunder</h1>
+		<p><a href="../2.1/uppgift2.1.html">Tillbaka till startsidan 2.1</a></p>
+	
+		<h2>Bakgrund</h2>
+		<h3>background-attachment</h3>
+		<p>Denna property sätter om en bakgrundsbild ska följa med innehållet på sidan eller sitta fast där den är, standard är att den följer med men detta kan man ändra med koden </p>
+		<pre><code>background-attachment: fixed;</code></pre> 
+		<p>i tex body-taggen.</p>
+		
+		<h3>background-color</h3>
+		<p>Denna property kan användas för att ändra bakgrundsfärg, antingen på hela hemsidan, eller på bara vissa delar som i detta exempel har en bakgrundsfärg lagts på huvudrubriken(&lt;h1&gt;) med koden</p> 
+			<pre><code>h1 {
+	background-color: peachpuff;
+}</code></pre>
+		
+		<h3>background-image</h3>
+		<p>Denna property sätter en eller flera bilder som bakgrund till element ett exempel i listan nedan med koden;</p>
+		<pre><code>li {
+	background-image: url(Heart.png);
+}</code></pre>
+		<p>Vilket då fyller bakgrunden med den satta bilder repiterande gånger.</p>
+		<ul>
+		<li>Bara en liten test lista</li>
+		<li>Med två rader</li>
+		</ul>
+		
+		<h3>background-position</h3>
+		<p>Denna property anger startpunkten för en bakgrundsbild, om man tex vill att den ska vara i mitten skriver man denna kod;</p>
+		<pre><code>background-position: center;</code></pre>
+		<p>Vilket kan ses i h2-taggarna.(Bakgrund)</p>
+		
+		<h3>background-repeat</h3>
+		<p>Denna property sätter hur en bakgrundsbild ska upprepas, standard är att den upprepas både vertikal och horisontelt men detta kan man ändra på genom attributet no-repeat som gör att bilden bara förekommer engång som bakgrundsbilden i bodyn och i h2-taggen <code>background-repeat: no-repeat;</code> eller genom att den bara upprepas antingen horisontelt eller vertikalt.</p>
+		
+		<h2>Img</h2>
+		<p>Att använda img taggen själv till css är oftast inte att rekommendera så det ofta finns små logo bilder och annat som man inte vill ha med när man ska styla bilder då är det oftast bättre att använda en klass selektor eller ett div element för att fång endast de bilder du är ute efter, eftersom jag bara kommer använda en bild i detta exempel satsar jag själv på en klass selektor för exemplet.</p>
+		<p>Om man vill att en text ska forma sig runt en bild och inte bara ligger över och under bilden är float en bra property att använda, i exemplet nedan ser koden ut som följer;</p>
+		<pre><code>	float: right;</code></pre>
+<p>Vilket gör att bilden ligger till vänster och texten som annars skulle varit under hamnar nu till vänster om bilden istället, men skulle de komma en rubrik under som man inte vill ska flyta runt bilden, sätter man in clear på den vilket skulle se ut som följande;</p>
+		<pre><code>h1, h2 {
+	clear: both;
+}</code></pre>
+		
+		<img class="right" src="../img/bildstor.jpg" alt="enbild" width="450">
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h2>En exempel title</h2>
+				
+	</body>
+</html>

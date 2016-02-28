@@ -1,0 +1,111 @@
+a#link:link {
+	color: cadetblue;
+}
+
+a#active:active {
+	color: fuchsia;
+}
+
+a#hover:hover {
+	font-size: 200%;
+}
+
+a#visit:visited {
+	color: aquamarine;
+}
+
+p#help {
+	cursor: help;
+}
+
+
+a#button:link {
+	border: 1px solid;
+	border-radius: 5px;
+	background-color: cadetblue;
+}
+
+a#button:visited {
+	background-color: aqua;
+}
+
+a#button:hover {
+	background-color: darksalmon;
+}
+
+a#button:active {
+	border: 2px dotted;
+}
+
+
+a#img:link {
+	border: 1px solid;
+	padding: 5px 5px 5px 1.7em;
+	background-image: url(../img/folderCheck.png);
+	background-repeat: no-repeat;
+}
+
+a#img:visited {
+	color: cornflowerblue;
+}
+
+a#img:hover {
+	background-color: crimson;
+}
+
+a#img:active {
+	border: none;
+}
+
+ul.nav {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+ul.nav a {
+	display: block;
+	width: 9em;
+	background-color: aqua;
+	height: 1.25em;
+	line-height: 1.25em;
+	border: 1px dotted;
+	border-left: 3px solid;
+	text-decoration: none;
+}
+
+ul.fotnav {
+	  padding: 5px;
+    margin: 10px 0;
+    list-style: none;
+    float: left;
+}
+
+ul.fotnav li {
+			float: left;
+	    margin: 0 10px;
+
+}
+
+ul.fotnav li a {
+    text-decoration: none;
+    float:left;
+    color: #999;
+    cursor: pointer;
+    font: 900 14px/22px "Arial", Helvetica, sans-serif;
+}
+
+ul.fotnav li a span {
+    margin: 0 10px 0 -10px;
+    padding: 1px 8px 5px 18px;
+    float:left;
+}
+
+ul.fotnav li a.current, ul.fotnav li a:hover {
+    background: url(../img/pink.png) no-repeat top right;
+ 		color: #860737;
+}
+ 
+ul.fotnav li a.current span, ul.fotnav li a:hover span {
+    background: url(../img/pink.png) no-repeat top left;
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8">
+	<title>Uppgift 1.1</title>
+</head>
+
+<body>
+	<h1 id="top">Tutorial i HTML5</h1>
+	<h2>Doctype</h2>
+	<p>Doctype skrivs i kod <code>&lt;!DOCTYPE html&gt;</code> och står överst i ett html-dokument för att visa vilken standard som är använd för dokumentet.</p>
+	
+	<h2>Teckenkod</h2>
+	<p>Teckenkod anges i koden <code>&lt;meta charset=" </code>här skriver man in vilken teckenkodning som används på sidan, vanligtvis utf-8<code> "&gt;</code> detta för att berätta för dator hur denne ska konverterar hemsidans text i bytes när det lagras i en fil, och hur den sen kan konverterar den tillbaka igen när 	filen ska läsas. <code> &lt;meta charset="utf-8"&gt;</code> anges överst i <code>&lt;head&gt;</code>-elementet om sådant finns annars direkt under Doctype.</p>
+	
+	<h2>Språk</h2>
+	<p>Det anses vara god smak att ange hemsidans huvudsakliga språk, detta för att tex optimera för sökmotorer ska kunna inkludera eller utesluta hemsidor i sökresulta beroende på hemsidans språk. Detta görs genom att lägga till <code>lang="</code> och de språk som använd, tex sv för svenska eller en för engelska <code>"</code> i <code>&lt;html&gt;</code>-taggen.</p>
+	
+	<h2>Validering</h2>
+	<p>Validering av en hemsida kan enklast göras med W3C validator, på <a href="http://validator.w3.org">validator.w3.org</a>, genom att validera en hemsida kan upptäcka om det finns kod som inte uppfyller HTML5's rekommenderade standard. Tex kan man upptäcka;</p>
+	
+	<ul>
+	<li>obligatoriska element som saknas, tex <code>&lt;title&gt;</code>-elementet</li>
+	<li>att slut-taggar saknas</li>
+	<li>misstag i nästlade listor</li>
+	<li>Taggar som saknar rätt attribut, tex <code>&lt;img&gt;</code> måste ha ett src attribut.</li>
+	<li>element eller innehåll som hamnat på fel ställe, tex <code>&lt;p&gt;</code>-text i <code>&lt;head&gt;</code>-sektionen.</li>
+	</ul>
+	
+	<h2>HTML-dokuments uppbyggnad</h2>
+	<p>HTML-dokument är uppbyggt med taggar(&lt;&gt;) dessa använda runt all text som förekommer i ett dokument, ett mycket enkelt HTML-dokument innehåller endast; </p> 
+		<pre><code>&lt;!DOCTYPE html&gt;
+&lt;title&gt;Ett pytte HTML Dokument&lt;/title&gt;
+&lt;p&gt;Detta är allt som behövs./p&gt;</code></pre>
+	
+	<p>Standarden på dokumentet(html), title på dokumentet och lite text, allt övrigt är valfritt, dock är det sedvanligt att man också har med ett head och ett boby element, ett html element och om man skriver på svenska är det mycket nödvändigt med ett meta element med ett charset attribut innehållande utf-8 för att få svenska å,ä,ö, då ser det ut på följande vis;</p>
+	
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;Ett lite större HTML Dokument&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;Detta är allt som behövs och lite till./p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+	
+	
+	<h2>Struktur</h2>
+	<h3>body</h3>
+	<p>Allt innehåll på sidan skrivs i body-taggen, det är innehållet i denna som syns i webbläsaren.</p>
+		<p>Exempel på body-tagg i kod;</p>
+	<pre><code>&lt;body&gt;
+&lt;h1&gt;Rubrik&lt;/h1&gt;
+&lt;p&gt;Lite text&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+
+	<h3>head</h3>
+	<p>Denna tagg innehåller "osynlig" information som används för att ge information till webbläsaren, sökmotorer mm. Detta syns inte på hemsidan. Sidans title, teckenkodning och länkar till stilmallar etc. är exempel på information som anges i head-taggen.</p>
+		<p>Exempel på head-tagg i kod;</p>
+	<pre><code>&lt;head&gt;
+&lt;meta charset="utf-8&gt;
+&lt;title&gt;Sidans title&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+	
+	<h3>html</h3>
+	<p>Denna tag anger att koden och sidan är ett HTML-dokument. Denna tagg omger allt på sidan utom Doctype. I denna tagg kan man även ange sidans språk.</p>
+		<p>Exempel på html-tagg i kod;</p>
+		<pre><code>&lt;html lang="sv"&gt;
+&lt;head&gt;
+&lt;title&gt;Sidans title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Lite text&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+	
+	<h3>title</h3>
+	<p>I title-taggen anges sidans titel som syns i fliken överst i webbläsaren, detta element anges i head-taggen.</p>
+	<p>Exempel på title-tagg i kod;</p>
+			<p><code>&lt;title&gt;Sidans titel&lt;/title&gt;</code></p>
+
+	<h2>Metainformation</h2>
+	<h3>meta-taggar med name-attributen</h3>
+	<p>Meta-taggar med namn-attribut används för att ge dold för användaren-vänlig information till webbläsaren och tex sökmotorer. Koden anges i head-elementet.</p>
+	<h4>author</h4>
+	<p>Anger sidans författare, ett exempel kan se ut såhär:</p>
+	<p><code>&lt;meta name="author" content="Emily Elmseld"&gt;</code></p>
+	<h4>description</h4>
+	<p>Används för att beskriva hemsidan, ett exempel;</p>
+	<p><code>&lt;meta name="description" content"HTML5-tutorial"&gt;</code></p>
+	<h4>generator</h4>
+	<p>Anger ett av de mjukvaruprogram som används för att generera sidan och kan där med inte användas på handskrivan hemsidor, ett exempel;</p>
+	<p><code>&lt;meta name="generator" content="FrontPage 4.0"&gt;</code></p>
+	<h4>http-equiv</h4>
+	<p>http-equiv attributet ger en HTTP-huvud information/värdet av attributets innehåll. Http-equiv kan användas för att simulera en HTTP-response tex uppdatera 		en hemsida var trettionde sekund;</p>
+	<p><code>&lt;meta http-equiv="refresh" content="30"&gt;</code></p>
+	<h4>keywords</h4>
+	<p>Används för att ange nyckelord för hemsidan, tex för bättre sökoptimering. Ett exempel;</p>
+	<p><code>&lt;meta name="keywords" content="HTML5, tutorial, skoluppgift"&gt;</code></p>
+	<h4>robots</h4>
+	<p>robots-taggen används för att leverera direktiv till sökmotorer, detta genom att skriva en lista som består av särskilda fördefinierade termer och de 					separeras med kommatecken, som ger instruktioner till sökrobotar etc. Ett exempel som säger till sökrobotar att inte besöka någon del av hemsida;</p>
+	<p><code>&lt;meta name="robots" content="nofollow"&gt;</code></p>
+	
+	<h2>Text</h2>
+	<h3>blockquote</h3>
+	<p>Ett blockquote element skapar en indragning i texten lika mycket från båda håll, ett exempel i kod;</p>
+	<pre><code>&lt;blockquote&gt;
+&lt;p&gt;If you can dream it you can do it!&lt;/p&gt;
+&lt;blockquote&gt;</code></pre>
+	<p>Så här ser det ut;</p>
+	<blockquote>
+	<p>If you can dream it you can do it!</p>
+	</blockquote>
+
+	<h3> h1, h2, h3, h4, h5, h6</h3>
+	<p>h1-h6 är element som skapar rubriker de är rankade från 1 till 6 där 1 har högst rank och störst font och 6 lägst rank och minst font, rubrik-elementen är inte gjorde för undertexter, alternativa titlar och taglines som inte är avsedd att vara rubriken för ett nytt avsnitt eller underavsnitt, ett exempel;</p>
+	<pre><code>&lt;h1&gt;h1 HuvudRubrik&lt;h1&gt;
+&lt;h2&gt;h2 Undre huvudRubrik&lt;h2&gt;
+&lt;h3&gt;h3 Rubrik&lt;h3&gt;
+&lt;h4&gt;h4 Rubrik&lt;h4&gt;
+&lt;h5&gt;h5 Rubrik&lt;h5&gt;
+&lt;h6&gt;h6 Rubrik&lt;h6&gt;</code></pre>
+	
+	<p>Så här ser de ut;</p>
+	<h1>h1 HuvudRubrik</h1>
+	<h2>h2 Under huvudRubrik</h2>
+	<h3>h3 Rubrik</h3>
+	<h4>h4 Rubrik</h4>
+	<h5>h5 Rubrik</h5>
+	<h6>h6 Rubrik</h6>
+	
+	<h3>p</h3>
+	<p>p representerar en paragraf och skapar ett nytt stycke för texten inom elementet, mycekt vanligt sätt att skriva text på en hemsida. Ett exempel;</p>
+	<pre><code>&lt;p&gt;Ett stycke text&lt;/p&gt;</code></pre>
+	<p>Skulle se ut så här;</p>
+	<p>Ett stycke text</p>
+	
+	
+	<h3>pre</h3>
+	<p>Ett pre element representerar ett stycke förformaterad text, vanliga områden är för att skriva en mailadress och kodstycken som exempeln på denna sida.Ett 		exempel;</p>
+	<pre><code>&lt;pre&gt;&lt;code&gt;&lt;h1&gt;Rubrik&lt;/h1&gt;&lt;/pre&gt;&lt;/code&gt;</code></pre>
+	
+	<p>Ser ut så här;</p>
+	<pre><code>&lt;h1&gt;Rubrik&lt;/h1&gt;</code></pre>
+	
+	<h3>span</h3>
+	<p>span taggen används för att gruppera inline-element i ett dokument, själv ger taggen ger ingen visuell förändring. Ett exempel för att färga en del av texten;</p>	
+	<pre><code>&lt;p&gt;Min mamma har &lt;span style="color:green"&gt;gröna&lt;/span&gt; ögon. &lt;/p&gt;</code></pre>
+	
+	<p>Ser ut så här;</p>
+	<p>Min mamma har <span style="color:green">gröna</span> ögon.</p>
+	
+	<h2 id="links">Hypertext</h2>
+	<h3>a</h3>
+	<p>En a-tagg definierar en hyperlänk, som används för att länka från en sida till en annan.</p>
+	<h4>Relativ och absolut länk</h4>
+	<p>En relativ länk pekar enbart på vart målet är i förhållande till sidan som länken är på och kan bara används när målet är i inom samma domän medans absoluta 	länkar istället tillhandahåller en specifik adress till länkens mål och funkar därmed även till andra hemsidor. Ett exempel, först på en relativlänk sen på en absolut länk;</p>
+	<pre><code>&lt;a href="annanSida.html"&gt;Relativ Länk&lt;/a&gt;</code></pre>
+	<pre><code>&lt;a href="http://dsv.su.se"&gt;Absolut Länk&lt;/a&gt;</code></pre>
+	
+	<p>Så här skulle länkarna se ut;</p>
+	<a href="annanSida.html">Relativ Länk</a>
+	<a href="http://dsv.su.se">Absolut Länk</a>
+	
+	<h4>Länk till ankare</h4>
+	<p>Länk med ankare använd för att länka till ett specifikt mål på en hemsida, tex för att komma till toppen av hemsidan igen eller på en lång sida för att hoppa till ett visst kapitel. Ett exempel på hur de skulle se ut i koden för att länka till toppen på den hemsidan;</p>
+	<pre><code>&lt;a href="#top"&gt;Kom till början av sidan&lt;/a&gt;</code></pre>
+	<p>Detta förutsätter dock att h1-elementet i toppen innehåller ett id-element med värdet top, så här;</p>
+	<pre><code>&lt;h1 id="top"&gt;Huvudrubriken&lt;/h1&gt;</code></pre>
+	<p>Då skulle länken funka så här;</p>
+	<a href="#top">Kom till början av sidan</a>
+	
+	<h4>Bild-länk</h4>
+	<p>Bild länkar används för att länk med tex loggor, koden skulle se ut så här;</p>
+	<pre><code>&lt;a href="annanSida.html&gt;&lt;img src="enBild.png" alt="logga" /&gt;&lt;/a&gt;</code></pre>
+	<p>Och skulle fungera så här;</p>
+	<a href="annanSida.html"><img src="../media/enBild.png" alt="logga"/></a>
+	
+	<h4>Länk till olika protokoll</h4>
+	<p>Man kan länka till olika protokoll för att tex hämta en fil, exempel på protokoll är ftp och gopher, så här skulle koden för en sån länk se ut för ett ftp-		protokoll;</p>
+	<pre><code>&lt;a href="ftp://[filens adress]"&gt;hämta filen här&lt;/a&gt;</code></pre>
+	<p>Den skulle se ut så här;</p>
+	<a href="ftp://[filens namn]">Hämta filen här</a>
+	
+	<h4>Mailto-länk</h4>
+	<p>En mailto-länk används för att leda en länk till en epostadress istället för en hemsida, i kod ser den ut som följade;</p>
+	<pre><code>&lt;a href="mailto:emily.elmseld@gmail.com"&gt;Maila mig!&lt;/a&gt;</code></pre>
+	<p>Ser ut så här;</p>
+	<a href="mailto:emily.elmseld@gmail.com">Maila mig!</a>
+	
+	<h2>Oordnad, ordnad och beskriven lista</h2>
+	<h3>dl</h3>
+	<p>dl-elementet används för att definiera en beskriven lista. Elementet omsluter en eller flera beskrivnings termer, inneslutna i ett dt-element och beskrivning 		definitioner (definitioner av termerna), inneslutna i ett dd-element.</p>
+	<h3>dt</h3>
+	<p>Ett dt-elementet visar en definition av termerna inom en definitionslista (dl). Ett dt följs vanligen av en eller flera dd element. Flera i rad dt tillskrivs 		dd element som omedelbart följer gruppen.</p>
+	<h3>dd</h3>
+	<p>Ett dd-elementet representerar beskrivningen, definition, eller värde, en del av en term-beskrivnings grupp i en definitionslista (dl).</p>
+	<p>Ett exempel på en så lista;</p>
+	<pre><code>&lt;dl&gt;
+ &lt;dt&gt;Kaffe&lt;/dt&gt;
+ 	&lt;dd&gt;svart&lt;/dd&gt;
+ 	&lt;dd&gt;varm&lt;/dd&gt;
+ &lt;dt&gt;Milk&lt;/dt&gt;
+ 	&lt;dd&gt;vit&lt;/dd&gt;
+  &lt;dd&gt;kall&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+	
+	<p>Den skulle se ut så här;</p>
+	<dl>
+  <dt>Kaffe</dt>
+  	<dd>svart</dd>
+		<dd>varm</dd>
+  <dt>Milk</dt>
+		<dd>vit</dd>
+  	<dd>kall</dd>
+</dl>
+	
+	<h3>ol</h3>
+	<p>ol-elementet är för att skapa en ordnad lista med listelement(li) de används för att skapa en nummrerad lista, antingen med siffror eller bostäver, standard 
+		är med siffror, ett exempel på en ordnad nästlad lista;</p>
+	<pre><code>&lt;ol&gt;
+	&lt;li&gt;Första raden&lt;/li&gt;
+	&lt;li&gt;Andra raden
+		&lt;ol&gt;
+			&lt;li&gt;Nästlad ny lista&lt;/li&gt;
+			&lt;li&gt;Andra raden&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Tillbaka i första listan igen&lt;/li&gt;
+	&lt;li&gt;Sista raden&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+	
+	<p>Skulle se ut såhär;</p>
+	<ol>
+		<li>Första raden</li>
+		<li>Andra raden
+			<ol>
+				<li>Nästlad ny lista</li>
+				<li>Andra raden</li>
+			</ol>
+		</li>
+		<li>Tillbaka i första listan igen</li>
+		<li>Sista raden</li>
+	</ol>
+	<h3>ul</h3>
+	<p>ul-elementet är för att skapa en oordnad lista med listelement(li) varje ny rad markeras med en punkt, man kan ändra symbol i stilmallen till cirkel, triangel eller punk som är standard, ett exempel på en oordnad nästlad lista;</p>
+	
+		<pre><code>&lt;ul&gt;
+	&lt;li&gt;Första raden&lt;/li&gt;
+	&lt;li&gt;Andra raden
+		&lt;ol&gt;
+			&lt;li&gt;Nästlad ny lista&lt;/li&gt;
+			&lt;li&gt;Andra raden&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Tillbaka i första listan igen&lt;/li&gt;
+	&lt;li&gt;Sista raden&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+	
+		<p>Skulle se ut såhär;</p>
+	<ul>
+		<li>Första raden</li>
+		<li>Andra raden
+			<ul>
+				<li>Nästlad ny lista</li>
+				<li>Andra raden</li>
+			</ul>
+		</li>
+		<li>Tillbaka i första listan igen</li>
+		<li>Sista raden</li>
+	</ul>
+	
+	<h3>li</h3>
+	<p>li-element är de element som utgör en ordnad och oordnad lista, de kan innehålla nästan vad som helst, koden för ett li-elmenten ser ut som följer;</p>
+	<pre><code>&lt;li&gt;en rad i en lista&lt;/li&gt;</code></pre>
+	
+	<h2>Tabell</h2>
+	<h3>table</h3>
+	<p>table-elementet definierar en html-tabell och innehåller minst en av td,th eller tr-elementen för att skapa en tabel.</p>
+	<h3>caption</h3>
+	<p>caption-elementet definerar en tabels rubrik, detta element är inte nödvändigt i en tabel men om de används måste de sitta direkt under table-taggen.</p>
+	<h3>tr</h3>
+	<p>tr-elementet definerar en rad i en html-tabell och innehåller minst ett td och/eller th-element.</p>
+	<h3>th</h3>
+	<p>th-elementet representerar en huvud cell i html-tabell, innehåller header information och texten i denna cell är bold och centerar som standard.</p>
+	<h3>td</h3>
+	<p>td-elementet representerar en standard cell i html-tabell, innehåller data och texten i denna cell är vanlig och vänsterjusterad som standard.</p>
+	<p>Ett exempel på en tabell som innehåller alla elementen beskriva ovan i kod;</p>
+	<pre><code>&lt;table&gt;
+  &lt;caption&gt;Tabellens Rubrik&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Första huvud(th) element&lt;/th&gt;
+    &lt;th&gt;Andra huvud(th) element&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Första standard(td) element&lt;/td&gt;
+    &lt;td&gt;Andra standard(td) element&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+	
+	<p>Så här skulle tabellen se ut;</p>
+	
+	<table>
+  <caption>Tabellens Rubrik</caption>
+  <tr>
+    <th>Första huvud(th) element</th>
+    <th>Andra huvud(th) element</th>
+  </tr>
+  <tr>
+    <td>Första standard(td) element</td>
+    <td>Andra standard(td) element</td>
+  </tr>
+</table>
+
+	<h2>Bild</h2>
+	<h3>img</h3>
+	<p>img-elementet definerar en bild, den har två attribut som bör vara med, src som innehåller sökvägen för bilden och alt ifall bilden inte öppnas eller ifall en dator använder blindhjälpmedel, så som skärmläsare, som innehåller en beskrivning av bilden. Utöver den är de vanligt att även använd hight och width attribut för att skapa absoluta värden för höjd och bredd på bilden, ett exempel på kod; </p>
+	<pre><code>&lt;img src="enBild.png" alt="logga" height="50" width="30" /&gt;</code></pre>
+	
+	<p>Så här ser den ut;</p>
+	
+	<img src="../media/enBild.png" alt="logga" height="50" width="30" />
+	
+	<h2>Bildkartor</h2>
+	<h3>area</h3>
+	<p>Ett area-element definierar ett område inuti en bild-karta(som är en bild med klickbara områden). area-elementet är alltid inkapslad i en map-tagg.</p>
+	
+	<h3>map</h3>
+	<p>Ett map-element används för att definiera en bild-karta. En bild-karta är en bild med klickbara områden. Map-elementet innehåller ett antal area-element, som 		definierar de klickbara områden i bildkartan. Måste innehålla ett name-attribut som specifiserar bilden som utgör bild-karta.</p>
+	
+	<p>Ett exempel på hur detta kan se ut i kod;</p>
+	<pre><code>&lt;img src="bildMap.jpg" width="400" height="300" alt="ytterklader" usemap="#kladMap"&gt;
+	
+&lt;map name="kladMap"&gt;
+	&lt;area shape="rect" coords="100,10,232,136" href="mysse.html" alt="mossa"&gt;
+	&lt;area shape="circle" coords="200,190,52" href="vantar.html" alt="vantar"&gt;
+	&lt;area shape="circle" coords="80,228,70" href="halsduk.html" alt="halsduk"&gt;
+	&lt;area shape="circle" coords="309,118,65" href="dregglis.html" alt="dregglis"&gt;
+&lt;/map&gt;</code></pre>
+	
+	<p>Så här skulle de då se ut;</p>
+	
+	<img src="../media/bildMap.jpg" width="400" height="300" alt="ytterklader" usemap="#kladMap">
+
+	<map name="kladMap">
+		<area shape="rect" coords="100,10,232,136" href="mysse.html" alt="mossa">
+		<area shape="circle" coords="200,190,52" href="vantar.html" alt="vantar">
+		<area shape="circle" coords="80,228,70" href="halsduk.html" alt="halsduk">
+		<area shape="circle" coords="309,118,65" href="dregglis.html" alt="dregglis">
+	</map>
+	
+	
+</body>
+</html>
+

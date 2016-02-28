@@ -1,0 +1,14 @@
+article {
+	width: auto;
+	
+	padding: 2px;
+	margin: 1px auto;
+}
+
+h1, h2, h3, p {
+	font-size: 75%;
+}
+
+img {
+	width: 100%;
+}

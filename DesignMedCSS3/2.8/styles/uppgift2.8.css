@@ -1,0 +1,3 @@
+@import url(uppgift2.8.mobil.css) (max-device-width: 480px);
+@import url(uppgift2.8.computer.css) (min-device-width: 481px);
+@import url(uppgift2.8.print.css);

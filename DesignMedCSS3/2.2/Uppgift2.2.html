@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 2.2</title>
+		<link href="uppgift2.2.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<h1>Uppgift 2.2 Text och listor</h1>
+		<p><a href="../2.1/uppgift2.1.html">Tillbaka till startsidan 2.1</a></p>
+		
+		<h2>Fontfamilj</h2>
+			<p>Fontfamiljer används för att man ställa in vilken eller vilka fonter som ska används på hela hemsidan, då för många fonter kan gör hemsida plottrig och 					svår läst, en eller max ett par mer lagom för att få en vacker och lättläst hemsida.</p>
+			<h3>serif</h3>
+				<p>Passa bäst till lång brödtexter då dess utseende gör dem lättlästa. Exampel på serif fonts är Times, Times New Roman och Georgia.</p>
+			<h3>sans-serif</h3>
+				<p>Sans-serif fonter används tackvare sitt raka och enkla uttryck oftast till rubriker. Exampel på sans-serif fonts inkluderar Arial, Helvetica och 								Verdana.</p>
+			<h3>monospace</h3>
+				<p>Monospaced fonts används ofta till dator kod, varje bokstav i monospace font är lika bred. Exempel på monospace fonts är Courier New, Courier och 								Lucida Console.</p>
+		
+		<h2>Enheter</h2>
+		<p>Det finns tre olika enheter för att sätta font-storlek som fungerar genom att lägga till eller dra ifrån från orginal inställningen, dessa är, nyckelord, 				procent och em.</p>
+			<h3>nyckelord (xx-small, x-small, small, medium, large, x-large och xx-large)</h3>
+			<p>Medium är samma som orginalstorleken och xx-small - small mindre och large - xx-large större, varje storlek ska innebära ett lika stort steg uppåt eller 					neråt men detta stämmer inte riktigt och metoden är relativt begränsad genom att bara ha 7 olika storleker.</p>
+			<h3>procent(%)</h3>
+			<p>Utgår från 100% som basstorleker och kan ändra storlek uppåt och nedåt genom procentsatser, tex 200% om man vill öka storleken till de dubbla eller 50% 					om man vill göra den hälften så stor, kan var lite riskabel i nästlade element men ger större storlekskontroll än ovan metod.</p>
+			<h3>em</h3>
+				<p>em fungerar på samma vis som procent, 100% är 1 em, 150% är 1.5 em 50% är .5 em och så vidare, även för em kan arv i nästlade element vara ett problem 					om man inte är uppmärksam.</p>
+	
+		<h2>Färg</h2>
+		<h3>color</h3>(testa med både egna färger och med fördefinierade systemfärger)
+		<p>Med color kan man ändra färg på texten, antingen med;</p> 
+		<h4>hexadecimal</h4>
+		<p>Med hexadecimaler anger man färg genom två tecken för mängden rött, två för mängden grön och två för mängden blått, som skulle se ut så här, <code>color: 				#CA7DDB</code> där CA är för rött, 7D för grönt och DB för blått. Ett exempel;</p>
+		<p id="hex">En liten text färgad med hexadecimaler</p>
+		<h4>RGB</h4>
+		<p>RGB anger också färg genom andelar rött/grönt/blått men istället i tal mellan 0-255 som skulle se ut så här; <code>color: rgb(202, 125, 219)</code>. Ett 					exempel;</p> 
+		<p id="rgb">En liten text färgad med RGB</p>
+		<h4>RGBA</h4> 
+		<p>Fungerar på samma sätt som RGB men med ett extra Alpha kanal som anger färgens opacitet och skulle se ut så här i kod; <code>color: rgba(155, 146, 150, 					.7);</code>. Ett exempel;</p>
+		<p id="rgba">En liten text färgad med RGBA</p>
+		<h4>HSL</h4>
+		<p>HSL anger färg genom tre tal, de första för att ange färg från färgcirkeln, andra för att ange färgens klarhet i procent och tredje för att ange färgens 				ljushet, i procent 0% är helt svart och 100% är helt vit, så här skulle de se ut i kod; <code>color: hsl(0, 100%, 50%);</code>. Ett exempel;</p>
+		<p id="hsl">En liten text färgad med HSL</p>
+		<h4>HSLA</h4>
+		<p>Fungerar på samma  sätt för HSL som RGBA för RGB, ser ut så här; <code>color: hsla(0, 100%, 50%, .5);</code>. Ett exempel;</p>
+		<p id="hsla">En liten text färgad med HSLA</p>
+		<h4>Fördefinerade färger</h4>
+		<p>Det finns även ett antal fördefinerade färger som fungerar alldeles utmärkt om du inte behöver så exakta färger då denna färgkarta är liten i antal, det skulle se ut så här i kod; <code>color: goldenrod;</code>. Ett exempel;</p>
+		<p id="deff">En liten text färgad med fördefinerade färger</p>
+		
+		<h2>Teckensnitt</h2> 
+		<h3>font-family</h3>
+		<p>Font-family anger huvudfonten på en hemsida, då alla browsrar inte stödjer samma fonter kan det vara lämpligt att ange ett par stycken för att försäkra sig 				om att browsern iaf känner till en, så här kan ett exempel se ut i kod; <code>font-family: Times, Times New Roman och Georgia;</code> </p>
+		
+		<h3>font-stretch</h3>
+		<p>Font-stretch gör det möjligt att ändra bredd på fonten för att antingen gör den bredare eller smalare, dock stöds inte denna property av någon webbrowser är i dagsläget inte användbar, ett exempel i kod skulle se ut; <code>font-stretch: ultra-condensed</code></p>
+		
+		<h3>font-size</h3>
+		<p>Font-size specifierar storlek på fonten, det finns flera olika mått att använda för detta några beskrivna ovan, ett exempel på kod är; <code>font-size:150%;</code> skulle se ut såhär;</p>
+		<p id="size">Ett exempel på hur font-size:150%; skulle se ut</p>
+		
+		<h3>font-size-adjust</h3>
+		<p>Denna bevarar läsbarheten av en font ifall det blir en font-fallback, tex när en browser inte stöder en viss font och istället använder en standard font 				som kanske är mycket mindre. Detta skulle se ut som följande; <code>font-size-adjust: 0.67</code></p>
+		
+		<h3>font-style</h3>
+		<p>Specifierar stilen på en font, tex gör det italic; <code>font-style:italic;</code> det skulle se ut såhär;</p>
+		<p id="style">Ett exempel på hur font-style:italic; skulle se ut</p>
+		
+		<h3>font-variant</h3>
+		<p>Bestämmer om en text ska vara små eller stora bokstäver, tex attributet small-caps, gör om alla små bokstäver till stora, dock förminskar den också fontet 			så de storbokstäverna inte tar mer utrymme än de små, kan se ut så här i kod; <code>font-variant:small-caps;</code> det skulle se ut såhär;</p>
+		<p id="variant">Ett exempel på hur font-variant:small-caps; skulle se ut</p>
+		
+		<h3>font-weight</h3>
+		<p>Denna property sätter hur tjocka bokstäverna i en text ska vara, ett exempel i kod; <code>font-weight:bold;</code>skulle ge detta resultat;</p>
+		<p id="weight">Exempel på font-weight:bold</p>
+
+		<h2>Text</h2>
+		<h3>letter-spacing</h3>
+		<p>Ökar eller minskare mellanrummet mellen bokstäver, i kod skulle de se ut som följade; <code>letter-spacing: 5px;</code> och skulle se ut så här;</p>
+		<p id="space">Exempel på letter-spacing: 5px;</p>
+		
+		<h3>word-spacing</h3>
+		<p>Ökar eller minskare mellanrummet mellen ord, i kod skulle de se ut som följade; <code>word-spacing: 5px;</code> och skulle se ut så här;</p>
+		<p id="word-space">Exempel på word-spacing: 5px;</p>
+		
+		<h3>line-height</h3>
+		<p>Sätter avståndet mellan rader i text, skulle se ut som följande i kod; <code>line-height: 50px;</code> och skulle se ut så här;</p>
+		<p id="line">Exempel på line-height: 50px; Exempel på line-height: 50px; Exempel på line-height: 50px; Exempel på line-height: 50px; Exempel på line-height: 50px; Exempel på line-height: 50px; Exempel på line-height: 50px; Exempel på line-height: 50px; Exempel på line-height: 50px; </p>
+		
+		<h3>text-align</h3>
+		<p>Specificerar justeringen av texten, till tex höger eller vänster justering, skulle se ut så här i kod; <code>text-align: center;</code> vilket centerar texten, exempel;</p>
+		<p id="align">Exempel på text-align: center;</p>
+		
+		<h3>text-decoration</h3>
+		<p>Specifierar dekorationen på texten, tex overline, underline eller line-through, så här skulle ett kodexempel kunna se ut; <code>text-decoration: overline;</code> och skulle se ut såhär;</p>
+		<p id="decoration">Exempel på text-decoration: overline;</p>
+		
+		<h3>text-shadow</h3>
+		<p>Lägger till en skugga på texten, kräver minst två attribut för h-shadow och v-shadow, de tredje ger färgen på skuggan, defult är svart(0) ett exempel kan se ut; <code>text-shadow: 2px 3px #ff0000;;</code> och ser ut såhär;</p>
+		<p id="shadow">Exempel på text-shadow: 2px 3px #ff0000;</p>
+		
+		<h3>text-indent</h3>
+		<p>Gör ett indrag på första raden i en text, ett exempel i kod; <code>text-indent: 45px;</code> skulle se ut såhär;</p>
+		<p id="indent">Exempel på text-indent: 45px;</p>
+		
+		<h3>text-transform</h3>
+		<p>Ädrar till stora eller småbokstäver, ett exempel i kod; <code>text-transform: uppercase;</code> skulle se ut såhär;</p>
+		<p id="transform">Exempel på text-transform: uppercase;</p>
+		
+		<h3>white-space</h3>
+		<p>Styr om text ska delas av i nya rader, attributet nowrap tex gör att texten aldrig kommer brytas ner till flera rader, exempel på detta; <code>white-space: nowrap;</code> skulle se ut som följade;</p>
+		<p id="white-space">Exempel på white-space: nowrap; Exempel på white-space: nowrap; Exempel på white-space: nowrap; Exempel på white-space: nowrap; Exempel på white-space: nowrap; Exempel på white-space: nowrap; Exempel på white-space: nowrap; Exempel på white-space: nowrap; Exempel på white-space: nowrap; </p>
+		
+		<h2>Stycken</h2>
+		<h3>p:first-line</h3>
+		<p>Låter dig ändra den första raden i en paragraf tex till en ny färg, ett exempel i kod; <code>p:first-line{color: firebrick;}</code> skulle se ut så här;</p>
+		<p id="f-li">Exempel på p:first-line{color: firebrick;}</p>
+		
+		<h3>p:first-letter</h3>
+		<p>Får stycket att sticka ut genom att förändra den första bokstaven tex till att göra den dubblet så stor, ett exempel i kod; <code>p:first-letter {font-size: 200%}</code> skulle se ut så här;</p>
+		<p id="f-le">Exempel på p:first-letter {font-size: 200%}</p>
+		<h2>Listor</h2>  
+		<h3>list-style-image</h3>
+		<p>Specificerar en bild som en list-markör, exempel i kod <code>list-style-image: url('heart.png');</code>skulle se ut så här;</p>
+		<ul id="list-img">
+			<li>Exempel på</li>
+			<li>list-style-image: url('heart.png');</li>
+		</ul>
+		
+		<h3>list-style-position</h3>
+		<p>Anger om markörena på en lista ska vara på insidan eller utsidan av listan, här är ett exempel på när de är på insidan; <code>list-style-position: inside;</code> skulle se ut såhär;</p>
+		<ul id="list-pos">
+			<li>Exempel på</li>
+			<li>list-style-position: inside;</li>
+		</ul>
+		
+		<h3>list-style-type</h3>
+		<p>Specifierar vilken typ av markör som ska visas i en lista, om man tex vill ha romerska siffror istället för standard siffrorna skulle de se ut såhär; <code>list-style-type: upper-roman</code> och listan skulle se ut såhär;</p>
+				<ol id="list-type">
+			<li>Exempel på</li>
+			<li>list-style-type: upper-roman;</li>
+		</ol>
+				
+	</body>
+</html>

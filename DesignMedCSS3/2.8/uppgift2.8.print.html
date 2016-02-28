@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 2.8</title>
+		<link href="styles/uppgift2.8.print.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<h1>Uppgift 2.8 CSS-konstruktioner för skrivare</h1>
+			
+	<h2>@page</h2>
+		<p>Används för att ange layouten på en page box, boxen består av två delar en sid-del och en marginal-del, det finns tre olika psudo-selectorer(:first, :left, :right) man kan använda för första sidan, höger och vänster sida, man kan inte använda sig av px eller pt då en skrivare inte förstår detta utan måste använda mått som tex cm. Ett exempel kan se ut såhär i kod;</p>
+		<pre><code>@page {
+	margin: 3cm;
+}</code></pre>
+		
+		<h3>page-brake-after</h3>
+		<p>Sätter om en sidbrytning borde ske efter elementet, exempel i kod;</p>
+		<pre><code>footer {
+	page-brake-after: always;
+}</code></pre>
+		<p>Denna kod sätter att en sidbrytning ska se efter varje footer och finns sidmallen för utskrift av denna sida.</p>
+		
+		<h3>page-brake-before</h3>
+		<p>Sätter om en sidbrytning ska ske före ett element, exempel i kod;</p>
+		<pre><code>h2 {
+	page-brake-before: avoid;
+}</code></pre>
+		<p>Denna kod sätter att om möjligt undvika att sidbryta före bilder och finns sidmallen för utskrift av denna sida.</p>
+		
+		<h3>page-brake-inside</h3>
+		<p>Sätter om en sidbryting är tilllåten inom ett element, ett exempel i kod;</p>
+		<pre><code>article {
+	page-break-inside: avoid;
+}</code></pre>
+		<p>Denna kod sätter att om möjligt undvika att sidbryta inom artikel element och finns sidmallen för utskrift av denna sida. Ingen av page-break propertys kan användas på absolut positionerade element.</p>
+		
+		<h3>size</h3>
+		<p>Sätter storleken på sid-delen av page boxen, ett exempel i kod;</p>
+		<pre><code>@page {
+	size: 8.5in 11in; 
+}</code></pre>
+		<h3>orphans</h3>
+		<p>Bestämmer de minsta antalet rader som måste lämnas på botten av en sidan när en sidbrytning sker inom ett element,  ett exempel i kod kan se ut såhär;</p>
+		<pre><code>orphans: 3;</code></pre>
+		<p>Denna kod finns med i sidans stilmall vid utskrift.</p>
+		<h3>widows</h3>
+		<p>Bestämmer de minsta antalet rader som måste lämnas på toppen av en sidan när en sidbrytning sker inom ett element, ett exempel i kod kan se ut såhär;</p>
+		<pre><code>widows: 3;</code></pre>
+		<p>Denna kod finns med i sidans stilmall vid utskrift.</p>
+	
+		<p><a href="uppgift2.8.html">Tillbaka</a></p>
+		
+	</body>
+</html>

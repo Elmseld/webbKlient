@@ -1,0 +1,28 @@
+body  {
+    background-image: url('../img/folderCheck.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    background-color: peachpuff;
+}
+
+h2 {
+		text-align: center;
+    background-image: url(../img/folderCheck.png);
+	  background-repeat: no-repeat;
+		background-position: center;
+}
+
+li {
+	background-image: url(../img/Heart.png);
+}
+
+.right {
+	float: right;
+}
+
+h1, h2 {
+	clear: both;
+}

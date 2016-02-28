@@ -1,0 +1,28 @@
+table {
+	border: 1px solid;
+}
+
+table td{
+	border: 1px solid;
+}
+
+
+table#collapse {
+    border-collapse:collapse;
+}
+
+table#spacing {
+	border-spacing: 15px 25px;
+}
+
+table#caption {
+	caption-side: bottom;
+}
+
+table#empty {
+	empty-cells: hide;
+}
+
+input[type="text"] {
+background-color: blue;
+}

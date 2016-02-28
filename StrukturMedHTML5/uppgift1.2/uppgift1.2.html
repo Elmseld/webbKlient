@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8">
+	<title>Uppgift 1.2</title>
+</head>
+	
+	<nav>
+	<h1>Sidans navigation</h1>
+		<p>HTML's Navigationselement (&lt;nav&gt;) representerar en sektion med navigeringslänkar, antingen länkar andra sidor, eller andra delar inom samma hemsidan.</p>
+	<ul>
+		<li><a href="../uppgift1.1/uppgift1.1.html">Uppgift 1.1</a></li>
+		<li><a href="../uppgift1.2/uppgift1.2.html">Uppgift 1.2</a></li>
+		<li><a href="../uppgift1.3/uppgift1.3.html">Uppgift 1.3</a></li>
+		<li><a href="../uppgift1.4/uppgift1.4.html">Uppgift 1.4</a></li>
+		<li><a href="../uppgift1.6.2/uppgift1.6.2.html">Uppgift 1.6.2</a></li>
+		</ul>
+	</nav>
+	
+		<aside>
+	<h1>Aside elementet</h1>
+	<p>innehåller text som till vis del är relaterad till resten av sidans innehåll, den används i första hand för att skapa;</p>
+			<ul>
+			<li>en sidbar</li>
+			<li>reklam</li>
+			<li>Citat från sidans huvudtext</li>
+			<li>och grupper av nav-element</li>
+			</ul>
+			<p>Eller annat innehåll som räknas som skild från det huvudsakliga innehållet på sidan.</p>
+	</aside>
+	
+	<article>
+		<header>
+			<h1>Header element</h1>
+			<p>header element (&lt;header&gt;) representerar huvudelementet av en sektion, en grupp av introduktion och/eller navigations element, det är tänkt att 						header elementet ska innehålla sektionens rubrik(et h1-h6 element eller en hgroup) men det är inget krav.</p>
+			<h1>Artikel element</h1>
+		</header>
+		
+		<p>Artikel elementet (&lt;Article&gt;) definierar en fristående text inom hemsidan. Den kan innenhålla både header och footer men detta är valfritt. Elementet 				skapades i HTML5 för att motverka överanvändningen av div elementet(&lt;div&gt;).Vanliga användningsområden får ett artikel element är;</p>
+			<ul>
+			<li>Forums inlägg</li>
+			<li>Tidnings artiklar</li>
+			<li>Blogginlägg</li>
+			<li>Läsares kommentarer</li>
+			<li>Interaktiv widget eller gadget</li>
+			</ul>
+		
+		<figure>
+		<figcaption><h1>figure o figcaption</h1></figcaption>
+			<img src="../media/bildMap.jpg" alt="hemmasydda baby-ytterkläder" width="200">
+			<p>figure elementet (&lt;figure&gt;)representerar ett självständigt innehåll, som tex en bild, det är valfritt om man vill ha en rubrik, i såna fall 									använder man ett figcation element (&lt;figcaption&gt;).</p>
+		</figure>
+		
+		<section>
+			<h2>Section element</h2>
+			<p>section elementet (&lt;section&gt;) definerar sektioner på hemsidan, som tex kapitel, header, footer eller andra sektioner som kan behövas på en sida. 					Det är nytt i HTML5. Det är inget krav att ha en rubrik i sektioner men dock är det högst önskvärt.</p>
+		</section>
+		
+		<section>
+			<h3>Rubrik till sektion två</h3>
+			<p>Detta är en annan sektion.</p>
+		</section>
+		
+		<details>
+			<summary>summary elementet (&lt;summary&gt;) används för att skapa en titel/rubrik till details elementet</summary>
+				<p>details elementet (&lt;details&gt;) används för att skapa en ihopfällbar box som man kan öppna genom att klicka på dess rubrik som ligger i ett summary 					elementet, detta element är dock valfritt. Om attrbutet open är inkluderat i details elementet kommer elementet vara öppet från början. Detta element 						saknar stöd i flertalet webb-browsers, för nu är det bara Chrome och Safari på Mac som stöder.				</p>
+		</details>
+		
+	</article>
+	<footer>footer elementet (&lt;footer&gt;) representera innehållet i slutet av de element den är i eller hela sidan om den inte ligger i något annat element.Här är det vanligt att information om författaren står och copyright.</footer>
+</html>

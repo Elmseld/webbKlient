@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 3.1</title>
+	</head>
+
+	<body>
+	<h1>Uppgift 3.1 Grunderna i JavaScript</h1>
+		
+		<h2>Externt länkad JavaScript-fil och dess fördelar</h2>
+		
+		<p>Att ha en externt länkad JS-fil innebär att man lägger alla JS-kod i en egen fil som man sedan länkar till när den ska användas, detta har flera fördelar, som lättare att återanvända koden så den kan användas på flera olika sidor, koden blir renare när man inte blandar flera olika vilket gör den mer lättläslig, editering är lättare efter man bara behöver ändra på ett ställe och optimeringen vill bli bättre på hemsida genom att mindre kod behöver laddas. Man kopplar den externa JS-fil till sin hemsida med följade kod i head(&lt;head&gt;)-elementet;</p>
+		
+		<pre><code>&lt;script src=”externFil.js”&gt;&lt;/script&gt;</code></pre>
+		
+		<h2>Satser(statement)</h2>
+		<p>En sats representerar vanligtvis ett steg i ett JS program, i de flesta fall är en sats en rad kod och avslutas med semicolon(;), ett exempel i kod;</p>
+		<pre><code>alert('Warning, warning!');</code></pre>
+		
+		<h2>Datatyper</h2>
+		<p>Det finns tre grund datatyper i JS, nummer, stängar och booleans, nummer används för att räkna och beräkna och anges med numreriska värden så som 7 tex. Strängar innefattar bokstäver och övriga symboler och används för att skriva ut text som tex namn, citat etc. Booleans kan bara ha två värden true eller false och används tex vid validering av input-data.</p>
+		
+		<h2>Variabler och arrayer</h2>
+		<p>Variablar används för att lagra information som man sedan kan använda eller manipulera, i JS ser koden för att skapa en varialen ut på följade vis;</p>
+		<pre><code>var variabel;</code></pre>
+		<p>En array är en lista som man kan lagra variablar i för att lättare ha koll på variablarna och kräver inte heller att man vet de exakta antalet då den kan förlängas eller förkortats vid behov. Koden för att skapa en tom array ser ut såhär;</p>
+		<pre><code>var arrayexempel = [];</code></pre>
+		<p>Och en array med innehåll kan se ut såhär;</p>
+		<pre><code>var arrayexempel2 = ['variabel1', 'variabel2', 'etc'];</code></pre>
+		
+		<h2>Operatorer och stränghantering</h2>
+		<p>Operatorer används för att manipulerar variabler och ser ut så här, +, -, *, /, etc man kan använda för att tex lägga ihop två variabler, är de numreriska plusas de ihop som vanlig matte, tex 5 + 5 blir 10 och är de strängar längs de efter varandra, tex "hej" + "på dig" blir "hej på dig".</p>
+		
+		<h2>Flödeshantering (if-satser och lopar)</h2>
+		<p>If-sats används för att kontrollera om ett visst vilkor uppfyllts och i såfall utförs en viss kod, detta kan se ut som följer i kod;</p>
+		<pre><code>if (condition) {
+		händer detta 
+		}</code></pre>
+		<p>Och villkoret inom parantesen uppfylls kommer koden inom {} köras annars hoppas denna över.</p>
+		<p>Om man kan behöva upprepa samma kod flera gånger kan en lop vara lämplig, denna kan antingen lopa ett förbestämt antal gånger eller bara lopa sålänge ett visst villkor är uppfyllt, det finns tre olika sorters lopar, while-lop som lopar så länge ett villkor uppfylls, ser ut såhär i kod;</p>
+		<pre><code>while (condition) {
+		gör detta tills condition = false
+		}</code></pre>
+		<p>En for-lop kan fungerar på nästan samma vis men används ofta för att lopa ett specifikt antal gånger och innehåller därför en räknare, koden blir oftast också mer kompakt, den kan se ut såhär;</p>
+		<pre><code>for (var i=0; i&lt;100; i++) {
+		Kod som upprepas så länge i är mindre än 100
+		}</code></pre>
+		<p>Inom paratensen är räknaren, först skapas variabeln i och tilldelas värdet 0, sen sätts villkoret att i inte får vara större än 100(kan också vara en anna variabel som hämtar som kanske gör att villkoret inte uppfylls) och sist sätts att i ska öka med 1 per varv. Denna lop är tex väldigt användbar när man ska jobba med arrayer.</p>
+		<p>Sista lopen är do/while lopen som funkar på samma vis som while lopen förutom att denna lop alltid gås igenom en gång först innan man kommer till villkoret så koden inuti denna lop kommer alltid bli använd minst en gång. Ett enkelt exempel i kod;</p>
+		<pre><code>do {
+		Kod som ska utföras
+		} while (condition); </code></pre>
+		
+		<h2>Funktioner</h2>
+		<p>Funktioner är en serie programerings steg som man sätter upp i början av sitt skript och sedan kallar på vid behov, dessa funktioner utförs inte förrän de blir kallade på men laddas in av webbläsarens minne så man kan kalla på dem när de behövs, ett exempel i kod;</p>
+		<pre><code>function funktionensnamn(medskickade variablar eller tom) {
+		JS koden som man vill använda
+		}</code></pre>
+		<p>Vill man sedan kalla på functionen skriver man bara dess namn;</p>
+		<pre><code>funktionensnamn(ev variablar);</code></pre>
+		
+		<h2>Reguljära uttryck</h2>
+		<p>Används för att hitta mönster i strängar, ett vanligt område är för att validera att text inmatad i fromulär är korrekt inmatad, tex att en mail adress iaf ser ut som en mail adress med ett @ och en . De kan tex se ut såhär i kod;</p>
+		<pre><code>/^[-\w.]+@([a-zA-Z0-9][-a-zA-Z0-9]+\.)+[a-zA-Z]{2,4}$/</code></pre>
+
+						
+	</body>
+</html>

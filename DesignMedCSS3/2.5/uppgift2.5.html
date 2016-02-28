@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Uppgift 2.5</title>
+		<link href="uppgift2.5.css" rel="stylesheet">
+	</head>
+
+	<body>
+	<h1>Uppgift 2.5 Navigering</h1>
+		<p><a href="../2.1/uppgift2.1.html">Tillbaka till startsidan 2.1</a></p>
+		
+		<h2>länktillstånd</h2>
+		<p>Länkar kan vara i fyra olika tillstånd, vilket webbrowsern kan känna av och man därmed kan programera för, så att en länk tex kan se ut på olika vis om den är besökt, obesökt, om användarens mus svävar över den eller den blir klickad på.</p>
+		
+		<h2>a:link</h2>
+		<p>För att styla en obesökt länk är används a:link, ett exempel;</p>
+		<pre><code></code></pre>
+		<p>Skulle se ut så här;</p>
+		<a id="link" href="http://ogiltigsida.se">Exempel obesökt sida</a>
+		
+		<h2>a:active</h2>
+		<p>Används för att styla hur en länk ska se ut precis när man klickat på den, ett exempel;</p>
+		<pre><code></code></pre>
+		<p>Skulle se ut såhär(klicka på länken;)</p>
+		<a id="active" href="uppgift2.5.html">Exempel länk vid klick</a>
+		
+		<h2>a:visited</h2>
+		<p>Används för att styla länkar som man redan har besökt, och då ligger i browserns historik, ett exempel;</p>
+		<pre><code></code></pre>
+		<p>Skulle se ut såhär;</p>
+		<a id="visit" href="uppgift2.5.html">Exempel besökt hemsida</a>
+	
+		<h2>a:hover</h2>
+		<p>Används för att styla en länk att se ut på ett visst sätt när användare för musläsaren över länken</p>
+		<pre><code></code></pre>
+		<p>Skulle se ut såhär(för muspekaren över länken);</p>
+		<a id="hover" href="uppgift2.5.html">Exempel på länk vid hovering</a>
+		
+		<h2>cursor</h2>
+		<p>Sätter vilken typ av muspekare som ska synas när man för musen över ett element, ett exempel;</p>
+		<pre><code>	cursor: help;</code></pre>
+		<p id="help">Skulle se ut såhär(håll muspekaren över denna text)!</p>
+		
+		<h2>Länk som en knapp</h2>
+		<p>Att styla en länk som en knapp kan man göra genom att ge den en border och en bakgrundsfärg, ett exempel;</p>
+		<pre><code>a#button:link {
+	border: 1px solid;
+	background-color: cadetblue;
+}
+
+a#button:visited {
+	background-color: aqua;
+}
+
+a#button:hover {
+	background-color: darksalmon;
+}
+
+a#button:active {
+	border: 2px dotted;
+}</code></pre>
+		<p>Skulle bli såhär;</p>
+		<a id="button" href="uppgift2.5.html">Knapp</a>
+		
+		<h2>Länk som en bild</h2>
+		<p>Att göra en länk med grafik gör du genom att lägga till en bakgrundsbild på en länk, tex såhär;</p>
+		<pre><code>a#img:link {
+	border: 1px solid;
+	padding: 5px 5px 5px 1.7em;
+	background-image: url(../img/folderCheck.png);
+	background-repeat: no-repeat;
+}
+
+a#img:visited {
+	color: cornflowerblue;
+}
+
+a#img:hover {
+	background-color: crimson;
+}
+
+a#img:active {
+	border: none;
+}</code></pre>
+		<p>Skulle bli såhär;</p>
+		<a id="img" href="uppgift2.5.html">Bild</a>
+		
+		<h3>Navigationsmeny vertikal</h3>
+		<ul class="nav">
+			<li><a href="uppgift2.5.html">hem</a></li>
+			<li><a href="uppgift2.5.html">bort</a></li>
+			<li><a href="uppgift2.5.html">någon annanstans</a></li>
+			</ul>
+				
+		<footer>		<h3>Navigationsmeny horisontell "sliding doors"</h3>
+		<ul class="fotnav">
+			<li><a href="uppgift2.5.html" class="current"><span>Hem</span></a></li>
+			<li><a href="uppgift2.5.html"><span>Bort</span></a></li>
+			<li><a href="uppgift2.5.html"><span>Någon annanstans</span></a></li>
+			</ul></footer>
+		
+		
+	</body>
+</html>
